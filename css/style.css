@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   color: #242424;
+  list-style: none;
 }
 
 body {
@@ -18,6 +20,13 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
+  color: #000;
+}
+
 a {
   font-size: medium;
   color: black;
@@ -28,7 +37,6 @@ p {
   font-size: medium;
 }
 
-
 .top {
   display: flex;
   justify-content: center;
@@ -36,9 +44,7 @@ p {
   background-repeat: no-repeat;
   height: 840px;
   /* padding-top: 8px; */
-
 }
-
 
 header {
   display: flex;
@@ -96,12 +102,11 @@ header {
   margin-top: 61px;
 }
 
-
 .carnival {
   content: url("../img/carnival.png");
   position: absolute;
   top: -130px;
-  left: -80px;
+  left: -60px;
   z-index: 2;
 }
 
@@ -109,6 +114,7 @@ header {
   padding: 52px 0 32px 58px;
   background-color: rgba(255, 255, 255, 0.64);
   border-radius: 24px;
+  border: 1px solid #fff;
   box-sizing: border-box;
   width: 709px;
 }
@@ -152,7 +158,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 2px rgba(255, 255, 255, .2);
+  border: solid 2px rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   width: 80px;
   height: 80px;
@@ -189,7 +195,78 @@ header {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  color: #FFF;
+  color: #fff;
   text-align: center;
+}
 
+.about-process-order {
+  padding: 120px 240px 100px;
+  background-color: #f4f6f8;
+}
+
+.process-order h2 {
+  max-width: 620px;
+}
+
+.process-order-h2-add {
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.process-order ul {
+  margin-top: 70px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.process-order li {
+  border-bottom: 2px dashed #d6a7af;
+  border-right: 2px dashed #d6a7af;
+  padding-left: 40px;
+  height: 246px;
+}
+
+.process-order li:nth-child(4n) {
+  border-right: none;
+}
+
+.process-order li:nth-child(1) {
+  padding-left: 0px;
+}
+
+.process-order li:nth-child(5) {
+  padding-left: 0px;
+}
+
+.position-number {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 69px;
+  color: #fa002c;
+}
+
+.position-number-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 34px;
+}
+
+.dashes-after-number {
+  width: 194px;
+  border-bottom: 2px dashed #FA002C;
+  height: 35px;
+}
+
+.process-order-info {
+  margin-top: 24px;
+  max-width: 250px;
+  line-height: 26px;
+}
+
+.current-proc-order {
+  background-color: #fff;
+  border-radius: 22px;
+  /* border: 2px dashed #FFF; */
+  border: none !important;
 }
