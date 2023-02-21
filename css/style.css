@@ -503,7 +503,6 @@ header {
   background: #ffffff;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
   border-radius: 36px;
-
 }
 
 .item-cal:hover {
@@ -519,7 +518,6 @@ header {
   color: #fff;
 }
 
-
 .title-calc {
   font-weight: 600;
   font-size: 30px;
@@ -531,7 +529,6 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-
 }
 
 .price-calc {
@@ -550,7 +547,6 @@ header {
   margin-top: 24px;
 }
 
-
 .cost-comparison {
   display: flex;
   justify-content: end;
@@ -561,7 +557,7 @@ header {
 .cost-comparison p:first-child::before {
   margin-right: 72px;
   content: "-";
-  color: #FA002C;
+  color: #fa002c;
 }
 
 .cost-comparison p:first-child {
@@ -570,17 +566,16 @@ header {
   line-height: 37px;
 }
 
-
 .cost-comparison p:last-child {
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
-  color: #FA002C;
+  color: #fa002c;
 }
 
 .cost-comparison .currency-sm {
   font-size: 36px;
-  color: #FA002C;
+  color: #fa002c;
 }
 
 .cost-comparison:last-child p:last-child {
@@ -589,4 +584,28 @@ header {
 
 .cost-comparison:last-child .currency-sm {
   color: #000;
+}
+
+.end-sect {
+  background-color: #fff;
+  padding: 100px 240px 0;
+}
+
+.adv-contain {
+ margin-top: 46px;
+ display: flex;
+ gap: 28px;
+}
+
+.adv-contain ul {
+  display: flex;
+  flex-wrap:wrap;
+  column-gap: 90px;
+}
+
+.adv-contain li {
+  padding: 30px 0;
+  border-bottom: 1px solid #C2C2C2;
+  min-width: 420px;
+
 }
