@@ -15,8 +15,9 @@ input[type="text"] {
 }
 
 body {
-  width: fit-content;
+  max-width: 1920px;
   margin: 0 auto;
+
 }
 
 h1 {
@@ -48,9 +49,10 @@ p {
 .top {
   display: flex;
   justify-content: center;
-  background-image: url("../img/Back_top.png");
+  background-image: url("../img/back-top.png");
   background-repeat: no-repeat;
   height: 840px;
+
   /* padding-top: 8px; */
 }
 
@@ -123,7 +125,7 @@ header {
   content: url("../img/carnival.png");
   position: absolute;
   top: -130px;
-  left: -60px;
+  left: -70px;
   z-index: 2;
 }
 
@@ -136,24 +138,29 @@ header {
   width: 709px;
 }
 
-.about-page ul {
+.list-top {
   max-width: 450px;
-  margin: 39px 0 41px 20px;
+  margin: 39px 0 41px 0;
 }
 
-.about-page li {
+
+
+.list-top p::before {
+  content: url("../img/check.svg");
+  margin-right: 16px;
+}
+
+.list-top p {
   margin-bottom: 13px;
   font-weight: 600;
   font-size: 26px;
   line-height: 36px;
-  list-style: none;
-  list-style-image: url("../img/check.svg");
   padding-left: 10px;
 }
 
-.about-page li:first-child::after {
-  margin-left: 12px;
+.list-top p:first-child::after {
   content: url("../img/flag.png");
+  margin-left: 12px;
 }
 
 .contact-block {
@@ -224,12 +231,12 @@ header {
   max-width: 620px;
 }
 
-.process-order-h2-add {
+.process-order-title-add {
   margin-top: 24px;
   font-size: 24px;
 }
 
-.process-order ul {
+.process-order ol {
   margin-top: 70px;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -296,13 +303,15 @@ header {
 }
 
 .mid-advantages {
+  position: relative;
   display: flex;
   align-items: start;
   justify-content: space-between;
   padding: 84px 58px 0 58px;
   /* background: linear-gradient(rgba(231, 231, 231, 0) , rgba(231, 231, 231, 0.78), rgba(231, 231, 231, 1)); */
   border-radius: 36px;
-    background-image: url("../img/blue_audi_back.png");
+  border: 2px solid #d6a7af;
+  background-image: url("../img/blue-audi-back.png");
   background-repeat: no-repeat;
   height: 850px;
 }
@@ -339,7 +348,7 @@ header {
 
 .advantages-list ul {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, min-content);
   grid-template-columns: 1fr 1fr;
   column-gap: 45px;
   row-gap: 50px;
@@ -357,4 +366,16 @@ header {
   width: 60px;
   height: 60px;
   border: 3px solid rgba(250, 0, 44, 0.15);
+}
+
+.adv-li p {
+  margin-top: 16px;
+}
+
+.audi {
+  position: absolute;
+  top: 550px;
+  left: -140px;
+  z-index: 2;
+  content: url("../img/audi.png");
 }
