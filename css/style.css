@@ -54,7 +54,8 @@ p {
 .top {
   display: flex;
   justify-content: center;
-  background-image: url("../img/back-top.png");
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+  url("../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
   height: 840px;
 }
@@ -617,10 +618,9 @@ header {
   position: relative;
 }
 
-.adv-contain ul li:last-child{
+.adv-contain ul li:last-child {
   border-bottom: none;
 }
-
 
 .adv-contain ul p {
   padding-left: 40px;
@@ -677,13 +677,14 @@ header {
   justify-content: center;
   width: 60px;
   height: 60px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   border-radius: 60px;
 }
 
 .arrow-btn:hover {
   border: 1px solid rgba(250, 0, 44, 1);
-  filter: invert(10%) sepia(87%) saturate(6217%) hue-rotate(344deg) brightness(109%) contrast(111%);
+  filter: invert(10%) sepia(87%) saturate(6217%) hue-rotate(344deg)
+    brightness(109%) contrast(111%);
 }
 
 .arrow-btn:last-child img {
@@ -713,7 +714,7 @@ header {
 
 .question-answer li {
   padding: 36px 0 36px;
-  border-bottom: 1px solid #C2C2C2;
+  border-bottom: 1px solid #c2c2c2;
   position: relative;
 }
 
@@ -766,4 +767,28 @@ header {
 
 .consultation {
   margin-top: 142px;
+  padding: 63px 500px 73px 65px;
+  background: radial-gradient(
+      81.41% 388.3% at 85.73% 40.4%,
+      #e6aeae 0%,
+      rgba(240, 206, 206, 0.74) 39.55%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../img/back-hyunday.png") no-repeat;
+  height: 533px;
+  border: 7px solid #e7e7e7;
+  border-radius: 36px;
+}
+
+.consult-in h2 span {
+  font-weight: 700;
+  color: #fa002c;
+}
+
+.consult-in-info {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 610px;
 }
