@@ -778,7 +778,13 @@ header {
   height: 533px;
   border: 7px solid #e7e7e7;
   border-radius: 36px;
+
 }
+
+.consult-in {
+  position: relative;
+}
+
 
 .consult-in h2 span {
   font-weight: 700;
@@ -791,4 +797,24 @@ header {
   font-size: 16px;
   line-height: 22px;
   max-width: 610px;
+}
+/* 301 72 */
+.btn-consult {
+  display: inline-block;
+  padding: 23px 42px;
+  margin-top: 50px;
+  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+  border-radius: 14px;
+}
+
+.hyundai {
+    position: absolute;
+    top: -330px;
+    left: 250px;
+    z-index: 2;
+    content: url(../img/hyundai.png);
+}
+
+.contacts {
+  margin-top: 117px;
 }
