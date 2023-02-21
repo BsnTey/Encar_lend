@@ -706,3 +706,64 @@ header {
 .question-answer {
   margin-top: 110px;
 }
+
+.question-answer ul {
+  margin-top: 14px;
+}
+
+.question-answer li {
+  padding: 36px 0 36px;
+  border-bottom: 1px solid #C2C2C2;
+  position: relative;
+}
+
+.question-answer li p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  padding-left: 93px;
+}
+
+.question-answer li p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 6px;
+  margin: 15px 25px 15px 0;
+  background: #fa002c;
+  border-radius: 1px;
+}
+
+.garant {
+  margin-top: 31px;
+}
+
+.garant p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  padding-left: 93px;
+  position: relative;
+}
+
+.garant p:before {
+  content: url(../img/checkbox.svg);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  align-items: center;
+  left: 0;
+  border-radius: 10px;
+  width: 60px;
+  height: 55px;
+  background: #fa002c;
+  box-shadow: 0px 12px 40px rgba(250, 0, 44, 0.4);
+}
+
+.consultation {
+  margin-top: 142px;
+}
