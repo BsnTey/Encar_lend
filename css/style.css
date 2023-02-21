@@ -478,3 +478,115 @@ header {
   box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
   text-align: center;
 }
+
+.calculate-car {
+  padding: 100px 240px 100px;
+  background-color: #f4f6f8;
+}
+
+.list-calc {
+  margin-top: 42px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #c2c2c2;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.item-cal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 30px 36px 40px;
+  max-width: 461px;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 36px;
+
+}
+
+.item-cal:hover {
+  background: radial-gradient(
+      99.46% 139.68% at 15.4% 16.97%,
+      #5e6b9a 0%,
+      rgba(94, 107, 154, 0) 100%
+    ),
+    url("../img/kia.png") no-repeat;
+}
+
+.item-cal:hover * {
+  color: #fff;
+}
+
+
+.title-calc {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.desc-calc {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+
+}
+
+.price-calc {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.price-calc span {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+
+.final-calc {
+  margin-top: 24px;
+}
+
+
+.cost-comparison {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 70px;
+}
+
+.cost-comparison p:first-child::before {
+  margin-right: 72px;
+  content: "-";
+  color: #FA002C;
+}
+
+.cost-comparison p:first-child {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+
+.cost-comparison p:last-child {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+  color: #FA002C;
+}
+
+.cost-comparison .currency-sm {
+  font-size: 36px;
+  color: #FA002C;
+}
+
+.cost-comparison:last-child p:last-child {
+  color: #000;
+}
+
+.cost-comparison:last-child .currency-sm {
+  color: #000;
+}
