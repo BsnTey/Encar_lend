@@ -693,3 +693,16 @@ header {
 .example-video {
   margin-top: 96px;
 }
+
+.example-video p {
+  margin-top: 16px;
+}
+
+.example-video video {
+  margin-top: 44px;
+  border-radius: 40px;
+}
+
+.question-answer {
+  margin-top: 110px;
+}
