@@ -17,7 +17,6 @@ input[type="text"] {
 body {
   max-width: 1920px;
   margin: 0 auto;
-
 }
 
 h1 {
@@ -32,7 +31,13 @@ h2 {
   font-size: 50px;
   line-height: 69px;
   font-weight: 700;
-  color: #000;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
 }
 
 a {
@@ -142,8 +147,6 @@ header {
   max-width: 450px;
   margin: 39px 0 41px 0;
 }
-
-
 
 .list-top p::before {
   content: url("../img/check.svg");
@@ -298,7 +301,7 @@ header {
 }
 
 .adv-pop-auto {
-  padding: 68px 240px 100px 240px ;
+  padding: 68px 240px 100px 240px;
   background-color: #fff;
 }
 
@@ -378,4 +381,100 @@ header {
   left: -140px;
   z-index: 2;
   content: url("../img/audi.png");
+}
+
+.popular-korea {
+  margin-top: 175px;
+}
+
+.popular-korea ul {
+  margin-top: 32px;
+  display: flex;
+  gap: 28px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-radius: 36px;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
+  max-width: 461px;
+}
+
+.card-item-top {
+  padding: 15px 15px 0;
+}
+
+.info-car {
+  margin: 0 7px 0;
+  padding: 25px 25px;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.info-car dl {
+  margin-top: 16px;
+}
+
+.info-car dl dt {
+  margin-top: 10px;
+}
+
+.info-car-desc {
+  font-weight: 400;
+}
+
+.info-car-desc::after {
+  content: "\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003";
+  text-decoration: underline #c1c1c1 dashed;
+}
+
+.info-car-prop {
+  font-weight: 600;
+}
+
+.info-car-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px 0 7px;
+}
+
+.price-rf {
+  padding: 15px 0 16px 32px;
+}
+
+.car-price {
+  font-size: 25px;
+}
+
+.car-price-desc {
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.adv-price-korea {
+  background: #fee5e9;
+  border-radius: 25px 0 0 25px;
+  margin-top: -1px;
+  padding: 15px 0 16px 22px;
+}
+
+.adv-price-korea .car-price {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fa002c;
+}
+
+.block-btn {
+  padding: 24px 32px 0;
+}
+
+.btn-analog {
+  display: block;
+  padding: 24px 46px;
+  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+  text-align: center;
 }
