@@ -54,8 +54,8 @@ p {
 .top {
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
-  url("../img/back-top.png") no-repeat;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
+    url("../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
   height: 840px;
 }
@@ -778,13 +778,11 @@ header {
   height: 533px;
   border: 7px solid #e7e7e7;
   border-radius: 36px;
-
 }
 
 .consult-in {
   position: relative;
 }
-
 
 .consult-in h2 span {
   font-weight: 700;
@@ -808,11 +806,11 @@ header {
 }
 
 .hyundai {
-    position: absolute;
-    top: -330px;
-    left: 250px;
-    z-index: 2;
-    content: url(../img/hyundai.png);
+  position: absolute;
+  top: -330px;
+  left: 250px;
+  z-index: 2;
+  content: url(../img/hyundai.png);
 }
 
 .contacts {
@@ -840,6 +838,95 @@ header {
   border-radius: 26px;
 }
 
-.map-in img:last-child {
+.border-cursor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 102px;
+  background: #fa002c;
+  background-color: rgba(250, 0, 44, 0.3);
+  border-radius: 50%;
   position: absolute;
+  top: 110px;
+  right: 280px;
+}
+
+.contact-add {
+  padding: 34px 48px 0;
+}
+.name-phone {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-phone p:first-child {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.name-phone p:last-child {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.address {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.address p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.address img {
+  width: 24px;
+}
+
+footer {
+  margin-top: 110px;
+  background: #FFF;
+}
+
+.footer {
+  background: #EEEEEE;
+  border-radius: 50px 50px 0 0;
+  padding: 50px 240px 72px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copywrite {
+  max-width: 430px;
+}
+
+.copywrite p {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer ul {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 89px;
+}
+
+.footer ul li a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contact {
+  width: 240px;
 }
