@@ -818,3 +818,28 @@ header {
 .contacts {
   margin-top: 117px;
 }
+
+.maps {
+  margin-top: 32px;
+  display: flex;
+  gap: 28px;
+}
+
+.map {
+  box-sizing: border-box;
+  border: 7px solid rgba(250, 0, 44, 0.2);
+  border-radius: 36px;
+  padding: 25px 24px 44px;
+}
+
+.map-in {
+  position: relative;
+}
+
+.map-in img:first-child {
+  border-radius: 26px;
+}
+
+.map-in img:last-child {
+  position: absolute;
+}
