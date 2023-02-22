@@ -320,7 +320,6 @@ header {
   align-items: start;
   justify-content: space-between;
   padding: 84px 58px 0 58px;
-  /* background: linear-gradient(rgba(231, 231, 231, 0) , rgba(231, 231, 231, 0.78), rgba(231, 231, 231, 1)); */
   border-radius: 36px;
   border: 2px solid #d6a7af;
   background-image: url("../img/blue-audi-back.png");
@@ -552,45 +551,55 @@ header {
 
 .final-calc {
   margin-top: 24px;
-}
-
-.cost-comparison {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+}
+
+.cost-desc {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 53px;
+  row-gap: 14px;
+  justify-content: flex-end;
+  justify-self: end;
   align-items: center;
-  gap: 70px;
+  position: relative;
 }
 
-.cost-comparison p:first-child::before {
-  margin-right: 72px;
-  content: "-";
-  color: #fa002c;
-}
-
-.cost-comparison p:first-child {
+.cost-dest-info {
   font-weight: 400;
   font-size: 30px;
   line-height: 37px;
+  margin-left: 50px;
 }
 
-.cost-comparison p:last-child {
+.cost-dest-info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 6px;
+  margin: 15px 0 15px 0;
+  background: #fa002c;
+  border-radius: 1px;
+}
+
+
+.final-cost {
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
+}
+
+.cost-desc p:nth-child(2),
+.cost-desc p:nth-child(2) .currency-sm {
   color: #fa002c;
 }
 
-.cost-comparison .currency-sm {
+.currency-sm {
+  font-weight: 600;
   font-size: 36px;
-  color: #fa002c;
-}
-
-.cost-comparison:last-child p:last-child {
-  color: #000;
-}
-
-.cost-comparison:last-child .currency-sm {
-  color: #000;
 }
 
 .end-sect {
@@ -891,11 +900,11 @@ header {
 
 footer {
   margin-top: 110px;
-  background: #FFF;
+  background: #fff;
 }
 
 .footer {
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 50px 50px 0 0;
   padding: 50px 240px 72px;
   display: flex;
