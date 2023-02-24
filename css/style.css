@@ -1,10 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-weight: 500; */
   color: #000;
-  list-style: none;
+  
   box-sizing: border-box;
 }
 
@@ -14,31 +14,25 @@ input[type="text"] {
   line-height: inherit;
 }
 
-body {
+/* body {
   max-width: 1920px;
   margin: 0 auto;
-}
+} */
 
-h1 {
-  font-size: 70px;
-  line-height: 90px;
-  font-weight: 800;
-  color: #282828;
-  text-transform: uppercase;
-}
 
-h2 {
+
+/* h2 {
   font-size: 50px;
   line-height: 69px;
   font-weight: 700;
-}
+} */
 
-h3 {
+/* h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 34px;
-}
+} */
 
 a {
   font-size: medium;
@@ -46,49 +40,56 @@ a {
   text-decoration: none;
 }
 
-p {
+/* p {
   font-size: 18px;
   line-height: 26px;
+} */
+
+.container {
+  padding: 0 240px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
-.top {
-  display: flex;
-  justify-content: center;
+.header-section {
+  /* display: flex;
+  justify-content: center; */
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
     url("../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
-  height: 840px;
+  min-height: 840px;
+  background-size:cover;
 }
 
-header {
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu-list {
-  margin: 0px 55px 0px 28px;
+.menu {
+  /* margin: 0px 55px 0px 28px; */
 }
 
-.menu-list ul {
+.menu__list {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 48px;
+  list-style: none;
 }
 
-.menu-list li a {
+.menu__link {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
-}
-
-.menu-list a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.red-btn {
+
+.phone-btn {
   color: white;
   background-color: #fa002c;
   border-radius: 8px;
@@ -113,16 +114,26 @@ header {
   padding: 15px 28px;
 }
 
-.phone-btn img {
+.phone-btn__img {
   width: 20px;
   margin-right: 6px;
 }
 
-.in-top {
+.header-section__content {
   position: absolute;
   display: flex;
-  justify-content: start;
-  margin-top: 61px;
+  justify-content: space-between;
+  gap: 73px;
+  padding-top: 61px;
+}
+
+.application-processing__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  line-height: 90px;
+  font-weight: 800;
+  color: #282828;
+  text-transform: uppercase;
 }
 
 .carnival {
@@ -133,7 +144,7 @@ header {
   z-index: 2;
 }
 
-.about-page {
+.application-processing {
   padding: 52px 0 32px 58px;
   background-color: rgba(255, 255, 255, 0.64);
   border-radius: 24px;
@@ -142,17 +153,17 @@ header {
   width: 709px;
 }
 
-.list-top {
+.application-processing__description {
   max-width: 450px;
-  margin: 39px 0 41px 0;
+  padding: 39px 0 41px 0;
 }
 
-.list-top p::before {
+.application-processing-list__item:before {
   content: url("../img/check.svg");
   margin-right: 16px;
 }
 
-.list-top p {
+.application-processing-list__item {
   margin-bottom: 13px;
   font-weight: 600;
   font-size: 26px;
@@ -160,26 +171,30 @@ header {
   padding-left: 10px;
 }
 
-.list-top p:first-child::after {
+.application-processing-list__item:first-child::after {
   content: url("../img/flag.png");
-  margin-left: 12px;
+  position: relative;
+  top: 5px;
+  left: 12px;
 }
 
-.contact-block {
-  display: flex;
-}
-
-.contact-block {
+.contact-buttons {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.consult-btn-top {
+.contact-buttons__get-consult-btn {
   padding: 27px 42px;
+  color: white;
+  background-color: #fa002c;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.soc-network {
+.social-network-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,13 +204,13 @@ header {
   height: 80px;
 }
 
-.soc-network img {
+.social-network-btn__img {
   display: block;
 }
 
 .preview {
   z-index: 3;
-  padding: 134px 0px 0px 175px;
+  padding-top: 134px;
 }
 
 .play-block {
@@ -211,12 +226,12 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.play-block img {
+.play-block__img {
   width: 80px;
   height: auto;
 }
 
-.play-block p {
+.play-block__desc {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
