@@ -4,7 +4,7 @@
   /* font-family: "Montserrat", sans-serif; */
   /* font-weight: 500; */
   color: #000;
-  
+
   box-sizing: border-box;
 }
 
@@ -18,8 +18,6 @@ input[type="text"] {
   max-width: 1920px;
   margin: 0 auto;
 } */
-
-
 
 /* h2 {
   font-size: 50px;
@@ -58,7 +56,7 @@ a {
     url("../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
   min-height: 840px;
-  background-size:cover;
+  background-size: cover;
 }
 
 .header {
@@ -87,7 +85,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 
 .phone-btn {
   color: white;
@@ -120,9 +117,9 @@ a {
 }
 
 .header-section__content {
-  position: absolute;
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 73px;
   padding-top: 61px;
 }
@@ -139,8 +136,8 @@ a {
 .carnival {
   content: url("../img/carnival.png");
   position: absolute;
-  top: -130px;
-  left: -70px;
+  top: -50px;
+  left: -50px;
   z-index: 2;
 }
 
@@ -239,97 +236,110 @@ a {
   text-align: center;
 }
 
-.about-process-order {
-  padding: 120px 240px 100px;
+.process-order {
   background-color: #f4f6f8;
 }
 
-.process-order h2 {
+.container__process-order {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.process-order__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
   max-width: 620px;
 }
 
-.process-order-title-add {
+.process-order__title-add {
   margin-top: 24px;
   font-size: 24px;
+  font-weight: 500;
 }
 
-.process-order ol {
-  margin-top: 70px;
+.process-order-list {
+  padding-top: 70px;
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.process-order li {
+.process-order-section {
   border-bottom: 2px dashed #d6a7af;
   border-right: 2px dashed #d6a7af;
   padding-left: 40px;
   padding-bottom: 41px;
 }
 
-.process-order li:nth-child(4n) {
+.process-order-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 60px;
+}
+
+.process-order-list__item:nth-child(4n) {
   border-right: none;
 }
 
-.process-order li:nth-child(n + 5):nth-child(-n + 8) {
+.process-order-list__item:nth-child(n + 5):nth-child(-n + 8) {
   padding-top: 51px;
 }
 
-.process-order li:nth-child(n + 5):nth-child(-n + 8) {
+.process-order-list__item:nth-child(n + 5):nth-child(-n + 8) {
   padding-top: 51px;
   padding-bottom: 24px;
 }
 
-.process-order li:nth-child(4n + 1) {
+.process-order-list__item:nth-child(4n + 1) {
   padding-left: 0px !important;
 }
 
-.position-number {
+.process-order-section__number {
   font-weight: 700;
   font-size: 60px;
   line-height: 69px;
   color: #fa002c;
 }
 
-.position-number::after {
+.process-order-section__number::after {
   content: " ";
   display: inline-block;
   position: absolute;
-  top: 50%;
-  width: 194px;
+  top: 25%;
+  width: 60%;
   border: 1px dashed #fa002c;
   margin-left: 34px;
 }
 
-.process-number {
+.process-order-section {
   position: relative;
 }
 
-.dashes-after-number {
-  width: 194px;
-  border-bottom: 2px dashed #fa002c;
-  height: 35px;
-}
-
-.process-order-info {
-  margin-top: 24px;
+.process-order-section__desc {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
   max-width: 260px;
   line-height: 26px;
 }
 
-.current-proc-order {
+.process-order-list__item--accent {
   margin: -2px;
   background-color: #fff;
   border-radius: 22px;
   border: none !important;
 }
 
-.adv-pop-auto {
-  padding: 68px 240px 100px 240px;
+.advantages {
+  padding: 68px 0 100px;
   background-color: #fff;
 }
 
-.mid-advantages {
+.advantages-buying {
   position: relative;
   display: flex;
   align-items: start;
@@ -339,10 +349,11 @@ a {
   border: 2px solid #d6a7af;
   background-image: url("../img/blue-audi-back.png");
   background-repeat: no-repeat;
-  height: 850px;
+  min-height: 840px;
+  background-size: cover;
 }
 
-.application {
+.application-form {
   padding: 45px 50px 70px 50px;
   max-width: 550px;
   background-color: #fff;
@@ -350,13 +361,34 @@ a {
   box-shadow: 0px 2px 50px rgba(35, 37, 38, 0.07);
 }
 
-.application p {
-  margin-top: 24px;
-  max-width: 410px;
+.application-form__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
 }
 
-#inputPhone {
-  margin-top: 37px;
+.application-form__desc {
+  margin-top: 24px;
+  max-width: 410px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.application-form__wrap {
+  padding-top: 37px;
+}
+
+.getconsult {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.getconsult__input {
   width: 100%;
   padding: 25px 0 25px 23px;
   border-radius: 14px;
@@ -365,27 +397,38 @@ a {
   font-weight: 800;
 }
 
-#getconsult {
-  margin-top: 16px;
-  padding: 24px 46px;
+.getconsult__btn {
+  max-width: 286px;
+  padding: 24px 0;
   border: 0;
   box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+  color: white;
+  background-color: #fa002c;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.advantages-list ul {
+.advantages-list {
   display: grid;
   grid-template-rows: repeat(4, min-content);
   grid-template-columns: 1fr 1fr;
   column-gap: 45px;
   row-gap: 50px;
+  list-style-type: none;
 }
 
-.adv-li {
+.advantages-list__item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
   max-width: 310px;
 }
 
-.adv-li p::before {
-  content: url("../img/adv1-like.svg");
+.advantages-list__item::before {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,6 +437,38 @@ a {
   width: 60px;
   height: 60px;
   border: 3px solid rgba(250, 0, 44, 0.15);
+}
+
+.advantages-list__item--like::before {
+  content: url("../img/like.svg");
+}
+
+.advantages-list__item--photo::before {
+  content: url("../img/photo.svg");
+}
+
+.advantages-list__item--dollar::before {
+  content: url("../img/dollar.svg");
+}
+
+.advantages-list__item--search::before {
+  content: url("../img/search.svg");
+}
+
+.advantages-list__item--dir::before {
+  content: url("../img/dir.svg");
+}
+
+.advantages-list__item--discount::before {
+  content: url("../img/discount.svg");
+}
+
+.advantages-list__item--shield::before {
+  content: url("../img/shield.svg");
+}
+
+.advantages-list__item--rub::before {
+  content: url("../img/rub.svg");
 }
 
 .audi {
@@ -405,11 +480,21 @@ a {
 }
 
 .popular-korea {
-  margin-top: 175px;
+  padding-top: 175px;
 }
 
-.popular-korea ul {
+.popular-korea__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
+}
+
+.popular-car-wrap {
   margin-top: 32px;
+}
+
+.popular-car-list {
   display: flex;
   gap: 28px;
 }
@@ -423,38 +508,63 @@ a {
   max-width: 461px;
 }
 
-.card-item-top {
+.card-item-photo {
   padding: 15px 15px 0;
 }
 
-.info-car {
+.description-car {
   margin: 0 7px 0;
   padding: 25px 25px;
   border-bottom: 1px solid #c1c1c1;
 }
 
-.info-car dl {
+.description-car__list {
   margin-top: 16px;
 }
 
-.info-car dl dt {
+.technical-parameters {
   margin-top: 10px;
 }
 
-.info-car-desc {
+.technical-parameters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.technical-parameters__item-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   font-weight: 400;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+  position: relative;
+  width: 70%;
 }
 
-.info-car-desc::after {
-  content: "\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003\2003";
-  text-decoration: underline #c1c1c1 dashed;
+.technical-parameters__item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  border-bottom: 1px dotted #d6dbe0;
 }
 
-.info-car-prop {
+.technical-parameters__item-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   font-weight: 600;
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  word-break: break-word;
 }
 
-.info-car-price {
+
+.car-price-wrap {
   display: flex;
   justify-content: space-between;
   padding: 0 7px 0 7px;
