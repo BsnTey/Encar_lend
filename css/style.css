@@ -628,12 +628,24 @@ a {
   font-size: 16px;
 }
 
-.calculate-car {
-  padding: 100px 240px 100px;
+.calculate {
   background-color: #f4f6f8;
 }
 
-.list-calc {
+.container-calculate {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.calculate__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
+  max-width: 800px;
+}
+
+.calculate-list {
   margin-top: 42px;
   padding-bottom: 50px;
   border-bottom: 1px solid #c2c2c2;
@@ -643,7 +655,7 @@ a {
   gap: 28px;
 }
 
-.item-cal {
+.calculate-list__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -654,7 +666,7 @@ a {
   border-radius: 36px;
 }
 
-.item-cal:hover {
+.calculate-list__item:hover {
   background: radial-gradient(
       99.46% 139.68% at 15.4% 16.97%,
       #5e6b9a 0%,
@@ -663,42 +675,45 @@ a {
     url("../img/kia.png") no-repeat;
 }
 
-.item-cal:hover * {
+.calculate-list__item:hover * {
   color: #fff;
 }
 
-.title-calc {
+.calculate-list-item__subtitle {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 30px;
   line-height: 37px;
 }
 
-.desc-calc {
+.calculate-list-item__description {
+  font-family: "Montserrat", sans-serif;
   margin-top: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
 }
 
-.price-calc {
+.calculate-list-item__price {
   margin-top: 12px;
   font-weight: 600;
   font-size: 36px;
 }
 
-.price-calc span {
+.calculate-list-item__price span {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
 }
 
-.final-calc {
+.calculate__price {
   margin-top: 24px;
   display: flex;
   justify-content: flex-end;
 }
 
-.cost-desc {
+.calculate-final-cost {
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: repeat(2, max-content);
@@ -710,14 +725,15 @@ a {
   position: relative;
 }
 
-.cost-dest-info {
+.calculate-final-cost__info {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 37px;
   margin-left: 50px;
 }
 
-.cost-dest-info::before {
+.calculate-final-cost__info::before {
   content: "";
   position: absolute;
   left: 0;
@@ -728,18 +744,18 @@ a {
   border-radius: 1px;
 }
 
-.final-cost {
+.calculate-final-cost__price {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
 }
 
-.cost-desc p:nth-child(2),
-.cost-desc p:nth-child(2) .currency-sm {
+.calculate-final-cost__price--red {
   color: #fa002c;
 }
 
-.currency-sm {
+.calculate-final-cost__price--small {
   font-weight: 600;
   font-size: 36px;
 }
