@@ -760,40 +760,54 @@ a {
   font-size: 36px;
 }
 
-.end-sect {
+.remaining-parts {
   background-color: #fff;
-  padding: 100px 240px 0;
+  padding-top: 100px;
 }
 
-.adv-contain {
-  margin-top: 46px;
+.korea-advantages__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
+}
+
+
+.korea-advantages__wrap {
+  padding-top: 46px;
   display: flex;
   gap: 28px;
 }
 
-.adv-contain ul {
+.korea-advantages-list {
   display: grid;
   grid-template-rows: repeat(7, max-content);
   grid-template-columns: repeat(2, max-content);
   column-gap: 90px;
+  list-style: none;
 }
 
-.adv-contain ul li {
+.korea-advantages-list__item {
   padding: 30px 0;
   border-bottom: 1px solid #c2c2c2;
   min-width: 420px;
   position: relative;
 }
 
-.adv-contain ul li:last-child {
+.korea-advantages-list__item:last-child {
   border-bottom: none;
 }
 
-.adv-contain ul p {
+.korea-advantages-list__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
   padding-left: 40px;
 }
 
-.adv-contain ul p::before {
+.korea-advantages-list__text::before {
   content: "";
   position: absolute;
   left: 0;
@@ -804,41 +818,43 @@ a {
   border-radius: 1px;
 }
 
-.adv-car-item {
+.korea-advantages__card {
   background: #ffffff;
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
   border-radius: 36px;
   align-self: flex-start;
 }
 
-.adv-car-item-in-top {
+.korea-advantages-photo {
   padding: 15px 15px 0 15px;
 }
 
-.adv-car-item-info {
+.description-card {
   padding: 24px 32px 30px 32px;
 }
 
-.adv-car-item-info p:first-child {
+.description-card__title {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 34px;
 }
 
-.car-item-info {
+.description-card__desc {
+  font-family: "Montserrat", sans-serif;
   margin-top: 14px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
 }
 
-.befor-after-btn {
+.scroll-buttons {
   display: flex;
   gap: 12px;
   padding: 24px 0 0 0;
 }
 
-.arrow-btn {
+.back-next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -848,13 +864,13 @@ a {
   border-radius: 60px;
 }
 
-.arrow-btn:hover {
+.back-next-btn:hover {
   border: 1px solid rgba(250, 0, 44, 1);
   filter: invert(10%) sepia(87%) saturate(6217%) hue-rotate(344deg)
     brightness(109%) contrast(111%);
 }
 
-.arrow-btn:last-child img {
+.back-next-btn__img--rotate {
   transform: rotate(180deg);
 }
 
