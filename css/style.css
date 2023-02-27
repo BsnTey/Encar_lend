@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-weight: 500; */
   color: #000;
 
   box-sizing: border-box;
@@ -14,34 +12,10 @@ input[type="text"] {
   line-height: inherit;
 }
 
-/* body {
-  max-width: 1920px;
-  margin: 0 auto;
-} */
-
-/* h2 {
-  font-size: 50px;
-  line-height: 69px;
-  font-weight: 700;
-} */
-
-/* h3 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 34px;
-} */
-
 a {
-  font-size: medium;
   color: black;
   text-decoration: none;
 }
-
-/* p {
-  font-size: 18px;
-  line-height: 26px;
-} */
 
 .container {
   padding: 0 240px;
@@ -49,9 +23,7 @@ a {
   margin: 0 auto;
 }
 
-.header-section {
-  /* display: flex;
-  justify-content: center; */
+.intro {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
     url("../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
@@ -65,11 +37,7 @@ a {
   align-items: center;
 }
 
-.menu {
-  /* margin: 0px 55px 0px 28px; */
-}
-
-.menu__list {
+.menu-list {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -79,6 +47,7 @@ a {
 
 .menu__link {
   font-family: "Montserrat", sans-serif;
+  font-size: medium;
   font-size: 16px;
   font-weight: 500;
   display: flex;
@@ -93,21 +62,6 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 18px;
-}
-
-.red-btn-sm {
-  color: white;
-  background-color: #fa002c;
-  border-radius: 14px;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.phone-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 15px 28px;
 }
 
@@ -116,7 +70,7 @@ a {
   margin-right: 6px;
 }
 
-.header-section__content {
+.intro__content {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -124,7 +78,7 @@ a {
   padding-top: 61px;
 }
 
-.application-processing__title {
+.intro-title {
   font-family: "Montserrat", sans-serif;
   font-size: 70px;
   line-height: 90px;
@@ -245,11 +199,14 @@ a {
   padding-bottom: 100px;
 }
 
-.process-order__title {
+.subtitle {
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
   line-height: 69px;
   font-weight: 700;
+}
+
+.process-order__title {
   max-width: 620px;
 }
 
@@ -308,23 +265,37 @@ a {
   content: " ";
   display: inline-block;
   position: absolute;
-  top: 25%;
+  top: 15%;
   width: 60%;
   border: 1px dashed #fa002c;
   margin-left: 34px;
+}
+
+.process-order-section__number--bot-section:after {
+  top: 35%;
 }
 
 .process-order-section {
   position: relative;
 }
 
-.process-order-section__desc {
+.m-text {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  max-width: 260px;
   line-height: 26px;
+}
+
+.s-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.process-order-section__desc {
+  max-width: 260px;
 }
 
 .process-order-list__item--accent {
@@ -361,21 +332,9 @@ a {
   box-shadow: 0px 2px 50px rgba(35, 37, 38, 0.07);
 }
 
-.application-form__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  line-height: 69px;
-  font-weight: 700;
-}
-
 .application-form__desc {
   margin-top: 24px;
   max-width: 410px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
 }
 
 .application-form__wrap {
@@ -420,20 +379,17 @@ a {
 }
 
 .advantages-list__item {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
   max-width: 310px;
 }
 
 .advantages-list__item::before {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 16px;
+  padding-top: 5px;
   width: 60px;
   height: 60px;
   border: 3px solid rgba(250, 0, 44, 0.15);
@@ -474,20 +430,13 @@ a {
 .audi {
   position: absolute;
   top: 550px;
-  left: -140px;
+  left: -135px;
   z-index: 2;
   content: url("../img/audi.png");
 }
 
 .popular-korea {
   padding-top: 175px;
-}
-
-.popular-korea__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  line-height: 69px;
-  font-weight: 700;
 }
 
 .popular-car-wrap {
@@ -540,9 +489,6 @@ a {
 }
 
 .technical-parameters__item-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
   display: flex;
   box-sizing: border-box;
   align-items: flex-end;
@@ -560,7 +506,7 @@ a {
   border-bottom: 1px dotted #d6dbe0;
 }
 
-.technical-parameters__item-desc {
+.technical-parameters__item-value {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -569,7 +515,6 @@ a {
   align-items: flex-end;
   word-break: break-word;
 }
-
 
 .car-price-wrap {
   display: flex;
@@ -586,7 +531,6 @@ a {
   font-size: 25px;
   font-weight: 500;
   line-height: 29px;
-
 }
 
 .car-price__desc {
@@ -638,10 +582,6 @@ a {
 }
 
 .calculate__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  line-height: 69px;
-  font-weight: 700;
   max-width: 800px;
 }
 
@@ -687,11 +627,7 @@ a {
 }
 
 .calculate-list-item__description {
-  font-family: "Montserrat", sans-serif;
   margin-top: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
 }
 
 .calculate-list-item__price {
@@ -763,15 +699,8 @@ a {
 .remaining-parts {
   background-color: #fff;
   padding-top: 100px;
+  padding-bottom: 110px;
 }
-
-.korea-advantages__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  line-height: 69px;
-  font-weight: 700;
-}
-
 
 .korea-advantages__wrap {
   padding-top: 46px;
@@ -799,11 +728,6 @@ a {
 }
 
 .korea-advantages-list__text {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
   padding-left: 40px;
 }
 
@@ -840,12 +764,8 @@ a {
   line-height: 34px;
 }
 
-.description-card__desc {
-  font-family: "Montserrat", sans-serif;
+.description-card__text {
   margin-top: 14px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .scroll-buttons {
@@ -874,34 +794,36 @@ a {
   transform: rotate(180deg);
 }
 
-.example-video {
-  margin-top: 96px;
+.remaining-parts__video {
+  padding-top: 96px;
 }
 
-.example-video p {
+.example-video__desc-video {
   margin-top: 16px;
 }
 
-.example-video video {
+.example-video__mp4 {
   margin-top: 44px;
   border-radius: 40px;
 }
 
-.question-answer {
-  margin-top: 110px;
+.remaining-parts__question-answer {
+  padding-top: 110px;
 }
 
-.question-answer ul {
-  margin-top: 14px;
+.question-answer-list {
+  padding-top: 14px;
+  list-style: none;
 }
 
-.question-answer li {
+.question-answer-content {
   padding: 36px 0 36px;
   border-bottom: 1px solid #c2c2c2;
   position: relative;
 }
 
-.question-answer li p {
+.question-answer-content__text {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -909,7 +831,7 @@ a {
   padding-left: 93px;
 }
 
-.question-answer li p::before {
+.question-answer-content__text::before {
   content: "";
   position: absolute;
   left: 0;
@@ -921,10 +843,11 @@ a {
 }
 
 .garant {
-  margin-top: 31px;
+  padding-top: 31px;
 }
 
-.garant p {
+.garant__text {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -933,7 +856,7 @@ a {
   position: relative;
 }
 
-.garant p:before {
+.garant__text:before {
   content: url(../img/checkbox.svg);
   position: absolute;
   display: flex;
@@ -948,60 +871,53 @@ a {
   box-shadow: 0px 12px 40px rgba(250, 0, 44, 0.4);
 }
 
-.consultation {
+.remaining-parts__consultation {
   margin-top: 142px;
+}
+
+.consultation {
   padding: 63px 500px 73px 65px;
-  background: radial-gradient(
-      81.41% 388.3% at 85.73% 40.4%,
-      #e6aeae 0%,
-      rgba(240, 206, 206, 0.74) 39.55%,
-      rgba(255, 255, 255, 0) 100%
-    ),
+  background: linear-gradient(-28.32deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
     url("../img/back-hyunday.png") no-repeat;
   height: 533px;
   border: 7px solid #e7e7e7;
   border-radius: 36px;
-}
-
-.consult-in {
   position: relative;
 }
 
-.consult-in h2 span {
-  font-weight: 700;
+.consultation__title span {
   color: #fa002c;
 }
 
-.consult-in-info {
+.consultation__text {
   margin-top: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
   max-width: 610px;
 }
-/* 301 72 */
-.btn-consult {
-  display: inline-block;
-  padding: 23px 42px;
-  margin-top: 50px;
-  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+
+.contact-buttons__get-consult-btn--less {
+  font-size: 16px;
   border-radius: 14px;
+  padding: 25px 54px;
+}
+
+.consultation__btn {
+  margin-top: 50px;
 }
 
 .hyundai {
   position: absolute;
-  top: -330px;
-  left: 250px;
+  top: -270px;
+  left: 315px;
   z-index: 2;
   content: url(../img/hyundai.png);
 }
 
-.contacts {
-  margin-top: 117px;
+.remaining-parts__contacts {
+  padding-top: 117px;
 }
 
 .maps {
-  margin-top: 32px;
+  padding-top: 32px;
   display: flex;
   gap: 28px;
 }
@@ -1013,74 +929,57 @@ a {
   padding: 25px 24px 44px;
 }
 
-.map-in {
+.map-contain {
   position: relative;
 }
 
-.map-in img:first-child {
-  border-radius: 26px;
-}
-
-.border-cursor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 102px;
-  height: 102px;
-  background: #fa002c;
-  background-color: rgba(250, 0, 44, 0.3);
-  border-radius: 50%;
-  position: absolute;
-  top: 110px;
-  right: 280px;
-}
-
-.contact-add {
+.map__contact {
   padding: 34px 48px 0;
 }
-.name-phone {
+.map-connect {
   display: flex;
   justify-content: space-between;
 }
 
-.name-phone p:first-child {
+.map-connect__office {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 37px;
 }
 
-.name-phone p:last-child {
+.map-connect__phone {
   font-weight: 600;
   font-size: 30px;
   line-height: 37px;
 }
 
-.address {
+.map-address {
   margin-top: 14px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.address p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.address img {
+.map-address__text::before {
+  content: "";
+  background: url(../img/location-cursor.svg);
+  background-size: 100% 100%;
+  display: inline-block;
   width: 24px;
-}
-
-footer {
-  margin-top: 110px;
-  background: #fff;
+  height: 24px;
+  position: relative;
+  top: 5px;
 }
 
 .footer {
   background: #eeeeee;
   border-radius: 50px 50px 0 0;
-  padding: 50px 240px 72px;
+  padding-top: 50px;
+  padding-bottom: 72px;
+}
+
+.footer__wrap {
   display: flex;
   justify-content: space-between;
 }
@@ -1089,22 +988,21 @@ footer {
   max-width: 430px;
 }
 
-.copywrite p {
+.copywrite__text {
   margin-top: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
 }
 
-.footer ul {
+.footer-menu {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr 1fr;
   row-gap: 16px;
   column-gap: 89px;
+  list-style: none;
 }
 
-.footer ul li a {
+.footer-menu__link {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
@@ -1112,4 +1010,8 @@ footer {
 
 .contact {
   width: 240px;
+}
+
+.address {
+  margin-top: 16px;
 }
