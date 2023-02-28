@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   color: #000;
-
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@ a {
 }
 
 .menu__link {
-  font-family: "Montserrat", sans-serif;
+
   font-size: medium;
   font-size: 16px;
   font-weight: 500;
@@ -79,7 +79,6 @@ a {
 }
 
 .intro-title {
-  font-family: "Montserrat", sans-serif;
   font-size: 70px;
   line-height: 90px;
   font-weight: 800;
@@ -90,8 +89,8 @@ a {
 .carnival {
   content: url("../img/carnival.png");
   position: absolute;
-  top: -50px;
-  left: -50px;
+  top: 230px;
+  left: 540px;
   z-index: 2;
 }
 
@@ -200,7 +199,6 @@ a {
 }
 
 .subtitle {
-  font-family: "Montserrat", sans-serif;
   font-size: 50px;
   line-height: 69px;
   font-weight: 700;
@@ -287,8 +285,7 @@ a {
   line-height: 26px;
 }
 
-.s-text {
-  font-family: "Montserrat", sans-serif;
+.small-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -507,7 +504,6 @@ a {
 }
 
 .technical-parameters__item-value {
-  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
   width: 30%;
@@ -527,14 +523,12 @@ a {
 }
 
 .car-price__price {
-  font-family: "Montserrat", sans-serif;
   font-size: 25px;
   font-weight: 500;
   line-height: 29px;
 }
 
 .car-price__desc {
-  font-family: "Montserrat", sans-serif;
   margin-top: 3px;
   font-size: 16px;
   font-weight: 400;
@@ -620,13 +614,12 @@ a {
 }
 
 .calculate-list-item__subtitle {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 30px;
   line-height: 37px;
 }
 
-.calculate-list-item__description {
+.calculate-list-item__desc {
   margin-top: 16px;
 }
 
@@ -637,7 +630,6 @@ a {
 }
 
 .calculate-list-item__price span {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
@@ -662,7 +654,6 @@ a {
 }
 
 .calculate-final-cost__info {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 37px;
@@ -681,7 +672,6 @@ a {
 }
 
 .calculate-final-cost__price {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
@@ -691,7 +681,7 @@ a {
   color: #fa002c;
 }
 
-.calculate-final-cost__price--small {
+.calculate-final-cost__small-text  {
   font-weight: 600;
   font-size: 36px;
 }
@@ -758,7 +748,6 @@ a {
 }
 
 .description-card__title {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 34px;
@@ -823,7 +812,6 @@ a {
 }
 
 .question-answer-content__text {
-  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -847,7 +835,6 @@ a {
 }
 
 .garant__text {
-  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -878,7 +865,7 @@ a {
 .consultation {
   padding: 63px 500px 73px 65px;
   background: linear-gradient(-28.32deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
-    url("../img/back-hyunday.png") no-repeat;
+    url("../img/back-hyundai.png") no-repeat;
   height: 533px;
   border: 7px solid #e7e7e7;
   border-radius: 36px;
@@ -906,8 +893,8 @@ a {
 
 .hyundai {
   position: absolute;
-  top: -270px;
-  left: 315px;
+  top: 190px;
+  left: 620px;
   z-index: 2;
   content: url(../img/hyundai.png);
 }
@@ -942,7 +929,6 @@ a {
 }
 
 .map-connect__office {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 37px;
@@ -1002,7 +988,6 @@ a {
 }
 
 .footer-menu__link {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
