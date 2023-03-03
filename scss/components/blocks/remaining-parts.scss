@@ -1,0 +1,293 @@
+.remaining-parts {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 110px;
+  &__video {
+    padding-top: 96px;
+  }
+  &__consultation {
+    margin-top: 142px;
+  }
+  &__question-answer {
+    padding-top: 110px;
+  }
+  &__contacts {
+    padding-top: 117px;
+  }
+}
+
+.korea-advantages__wrap {
+  padding-top: 46px;
+  display: flex;
+  gap: 28px;
+}
+
+.korea-advantages-list {
+  display: grid;
+  grid-template-rows: repeat(7, max-content);
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 90px;
+  list-style: none;
+  &__item {
+    padding: 30px 0;
+    border-bottom: 1px solid #c2c2c2;
+    min-width: 420px;
+    position: relative;
+  }
+  &__item:last-child {
+    border-bottom: none;
+  }
+  &__text {
+    padding-left: 40px;
+  }
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 6px;
+    margin: 10px 25px 10px 0;
+    background: #fa002c;
+    border-radius: 1px;
+  }
+}
+
+.korea-advantages__card {
+  background: #ffffff;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
+  border-radius: 36px;
+  align-self: flex-start;
+}
+
+.korea-advantages-photo {
+  padding: 15px 15px 0 15px;
+}
+
+.description-card {
+  padding: 24px 32px 30px 32px;
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  &__text {
+    margin-top: 14px;
+  }
+}
+
+.scroll-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 24px 0 0 0;
+}
+
+.back-next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #d3d3d3;
+  border-radius: 60px;
+  &:hover {
+    border: 1px solid rgba(250, 0, 44, 1);
+    filter: invert(10%) sepia(87%) saturate(6217%) hue-rotate(344deg)
+      brightness(109%) contrast(111%);
+  }
+  &__img--rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.example-video__desc-video {
+  margin-top: 16px;
+}
+
+.example-video__mp4 {
+  margin-top: 44px;
+  border-radius: 40px;
+}
+
+.question-answer-list {
+  padding-top: 14px;
+  list-style: none;
+}
+
+.question-answer-content {
+  padding: 36px 0 36px;
+  border-bottom: 1px solid #c2c2c2;
+  position: relative;
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    padding-left: 93px;
+  }
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 6px;
+    margin: 15px 25px 15px 0;
+    background: #fa002c;
+    border-radius: 1px;
+  }
+}
+
+.garant {
+  padding-top: 31px;
+  &__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 93px;
+    position: relative;
+  }
+  &__text:before {
+    content: url(../../../img/checkbox.svg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    align-items: center;
+    left: 0;
+    border-radius: 10px;
+    width: 60px;
+    height: 55px;
+    background: #fa002c;
+    box-shadow: 0px 12px 40px rgba(250, 0, 44, 0.4);
+  }
+}
+
+.consultation {
+  padding: 63px 500px 73px 65px;
+  background: linear-gradient(
+      -28.32deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../../img/back-hyundai.png") no-repeat;
+  height: 533px;
+  border: 7px solid #e7e7e7;
+  border-radius: 36px;
+  position: relative;
+  &__title span {
+    color: #fa002c;
+  }
+  &__text {
+    margin-top: 24px;
+    max-width: 610px;
+  }
+  &__btn {
+    margin-top: 50px;
+  }
+}
+
+.contact-buttons__get-consult-btn--less {
+  font-size: 16px;
+  border-radius: 14px;
+  padding: 25px 54px;
+}
+
+.hyundai {
+  position: absolute;
+  top: 190px;
+  left: 620px;
+  z-index: 2;
+  content: url(../../../img/hyundai.png);
+}
+
+.maps {
+  padding-top: 32px;
+  display: flex;
+  gap: 28px;
+}
+
+.map {
+  box-sizing: border-box;
+  border: 7px solid rgba(250, 0, 44, 0.2);
+  border-radius: 36px;
+  padding: 25px 24px 44px;
+  &__contact {
+    padding: 34px 48px 0;
+  }
+}
+
+.map-contain {
+  position: relative;
+}
+
+.map-connect {
+  display: flex;
+  justify-content: space-between;
+  &__office {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  &__phone {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.map-address {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  &__text::before {
+    content: "";
+    background: url(../../../img/location-cursor.svg);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+.footer {
+  background: #eeeeee;
+  border-radius: 50px 50px 0 0;
+  padding-top: 50px;
+  padding-bottom: 72px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.copywrite {
+  max-width: 430px;
+  &__text {
+    margin-top: 16px;
+  }
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 89px;
+  list-style: none;
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.contact {
+  width: 240px;
+}
+
+.address {
+  margin-top: 16px;
+}

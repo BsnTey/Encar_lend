@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 0 240px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.m-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.small-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}/*# sourceMappingURL=common.css.map */

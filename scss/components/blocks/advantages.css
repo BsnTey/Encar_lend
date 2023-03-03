@@ -1,0 +1,237 @@
+.advantages {
+  padding: 68px 0 100px;
+  background-color: #fff;
+}
+
+.advantages-buying {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 84px 58px 0 58px;
+  border-radius: 36px;
+  border: 2px solid #d6a7af;
+  background-image: url("../../../img/blue-audi-back.png");
+  background-repeat: no-repeat;
+  min-height: 840px;
+  background-size: cover;
+}
+
+.application-form {
+  padding: 45px 50px 70px 50px;
+  max-width: 550px;
+  background-color: #fff;
+  border-radius: 22px;
+  box-shadow: 0px 2px 50px rgba(35, 37, 38, 0.07);
+}
+.application-form__desc {
+  margin-top: 24px;
+  max-width: 410px;
+}
+.application-form__wrap {
+  padding-top: 37px;
+}
+
+.getconsult {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.getconsult__input {
+  width: 100%;
+  padding: 25px 0 25px 23px;
+  border-radius: 14px;
+  border: 2px solid rgba(201, 201, 201, 0.4);
+  font-size: 16px;
+  font-weight: 800;
+}
+.getconsult__btn {
+  max-width: 286px;
+  padding: 24px 0;
+  border: 0;
+  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+  color: white;
+  background-color: #fa002c;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  row-gap: 50px;
+  list-style-type: none;
+}
+.advantages-list__item {
+  max-width: 310px;
+}
+.advantages-list__item::before {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding-top: 5px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(250, 0, 44, 0.15);
+}
+.advantages-list__item--like::before {
+  content: url("../../../img/like.svg");
+}
+.advantages-list__item--photo::before {
+  content: url("../../../img/photo.svg");
+}
+.advantages-list__item--dollar::before {
+  content: url("../../../img/dollar.svg");
+}
+.advantages-list__item--search::before {
+  content: url("../../../img/search.svg");
+}
+.advantages-list__item--dir::before {
+  content: url("../../../img/dir.svg");
+}
+.advantages-list__item--discount::before {
+  content: url("../../../img/discount.svg");
+}
+.advantages-list__item--shield::before {
+  content: url("../../../img/shield.svg");
+}
+.advantages-list__item--rub::before {
+  content: url("../../../img/rub.svg");
+}
+
+.audi {
+  position: absolute;
+  top: 550px;
+  left: -135px;
+  z-index: 2;
+  content: url("../../../img/audi.png");
+}
+
+.popular-korea {
+  padding-top: 175px;
+}
+
+.popular-car-wrap {
+  margin-top: 32px;
+}
+
+.popular-car-list {
+  display: flex;
+  gap: 28px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-radius: 36px;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
+  max-width: 461px;
+}
+.card-item__btn {
+  padding: 24px 32px 0;
+}
+
+.card-item-photo {
+  padding: 15px 15px 0;
+}
+
+.description-car {
+  margin: 0 7px 0;
+  padding: 25px 25px;
+  border-bottom: 1px solid #c1c1c1;
+}
+.description-car__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+.description-car__list {
+  margin-top: 16px;
+}
+
+.technical-parameters {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.technical-parameters__item-title {
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+  position: relative;
+  width: 70%;
+}
+.technical-parameters__item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  border-bottom: 1px dotted #d6dbe0;
+}
+.technical-parameters__item-value {
+  font-size: 16px;
+  font-weight: 600;
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  word-break: break-word;
+}
+
+.car-price-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px 0 7px;
+}
+
+.car-price {
+  padding: 15px 0 16px 32px;
+}
+.car-price__price {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.car-price__desc {
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.car-price--selected {
+  background: #fee5e9;
+  border-radius: 25px 0 0 25px;
+  margin-top: -1px;
+  padding: 15px 0 16px 22px;
+}
+.car-price__price--selected {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fa002c;
+}
+
+.btn-analog-wrap__analog-btn {
+  display: block;
+  padding: 24px 46px;
+  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+  text-align: center;
+  color: white;
+  background-color: #fa002c;
+  border-radius: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}/*# sourceMappingURL=advantages.css.map */

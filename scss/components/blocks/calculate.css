@@ -1,0 +1,106 @@
+.container-calculate {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.calculate {
+  background-color: #f4f6f8;
+}
+.calculate__title {
+  max-width: 800px;
+}
+
+.calculate-list {
+  margin-top: 42px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #c2c2c2;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.calculate-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 30px 36px 40px;
+  max-width: 461px;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 36px;
+}
+.calculate-list__item:hover {
+  background: radial-gradient(99.46% 139.68% at 15.4% 16.97%, #5e6b9a 0%, rgba(94, 107, 154, 0) 100%), url("../../../img/kia.png") no-repeat;
+}
+.calculate-list__item:hover * {
+  color: #fff;
+}
+
+.calculate-list-item__subtitle {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.calculate-list-item__desc {
+  margin-top: 16px;
+}
+
+.calculate-list-item__price {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.calculate-list-item__price span {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+
+.calculate__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculate-final-cost {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(2, max-content);
+  -moz-column-gap: 53px;
+       column-gap: 53px;
+  row-gap: 14px;
+  justify-content: flex-end;
+  justify-self: end;
+  align-items: center;
+  position: relative;
+}
+.calculate-final-cost__info {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  margin-left: 50px;
+}
+.calculate-final-cost__info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 6px;
+  margin: 15px 0 15px 0;
+  background: #fa002c;
+  border-radius: 1px;
+}
+.calculate-final-cost__price {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+.calculate-final-cost__price--red {
+  color: #fa002c;
+}
+.calculate-final-cost__small-text {
+  font-weight: 600;
+  font-size: 36px;
+}/*# sourceMappingURL=calculate.css.map */

@@ -1,0 +1,8 @@
+/* @import "components/common/reset.css"; */
+@import "components/common/common.css";
+@import "components/blocks/intro.css";
+@import "components/blocks/advantages.css";
+@import "components/blocks/process-order.css";
+@import "components/blocks/calculate.css";
+@import "components/blocks/remaining-parts.css";
+@import "components/blocks/footer.css";

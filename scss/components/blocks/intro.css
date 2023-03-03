@@ -1,0 +1,153 @@
+.intro {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url("../../../img/back-top.png") no-repeat;
+  background-repeat: no-repeat;
+  min-height: 840px;
+  background-size: cover;
+}
+.intro__content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  gap: 73px;
+  padding-top: 61px;
+}
+.intro-title {
+  font-size: 70px;
+  line-height: 90px;
+  font-weight: 800;
+  color: #282828;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 48px;
+  list-style: none;
+}
+
+.menu__list-link {
+  font-size: medium;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-btn {
+  color: white;
+  background-color: #fa002c;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 28px;
+}
+.phone-btn__img {
+  width: 20px;
+  margin-right: 6px;
+}
+
+.carnival {
+  content: url("../../../img/carnival.png");
+  position: absolute;
+  top: 230px;
+  left: 540px;
+  z-index: 2;
+}
+
+.application-processing {
+  padding: 52px 0 32px 58px;
+  background-color: rgba(255, 255, 255, 0.64);
+  border-radius: 24px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  width: 709px;
+}
+.application-processing__description {
+  max-width: 450px;
+  padding: 39px 0 41px 0;
+}
+.application-processing-list__item {
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  padding-left: 10px;
+}
+.application-processing-list__item:before {
+  content: url("../../../img/check.svg");
+  margin-right: 16px;
+}
+.application-processing-list__item:first-child::after {
+  content: url("../../../img/flag.png");
+  position: relative;
+  top: 5px;
+  left: 12px;
+}
+
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-buttons__get-consult-btn {
+  padding: 27px 42px;
+  color: white;
+  background-color: #fa002c;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.social-network-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+}
+.social-network-btn__img {
+  display: block;
+}
+
+.preview {
+  z-index: 3;
+  padding-top: 134px;
+}
+
+.play-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  padding: 51px 43px 21px;
+  border-radius: 24px;
+  border: solid 1px rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.play-block__img {
+  width: 80px;
+  height: auto;
+}
+.play-block__desc {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+}/*# sourceMappingURL=intro.css.map */
