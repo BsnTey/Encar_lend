@@ -20,7 +20,7 @@ $icons: (
   align-items: start;
   justify-content: space-between;
   gap: 40px;
-  padding: 84px 58px 0 58px;
+  padding: 84px 58px 84px 58px;
   border-radius: 36px;
   border: 2px solid #d6a7af;
   background-image: url("../../../img/blue-audi-back.png");
@@ -31,13 +31,17 @@ $icons: (
 
 @media (max-width: 1450px) {
   .advantages-buying {
-    padding: 44px 58px 0 58px;
+    padding: 44px 58px 44px 58px;
+  }
+  .advantages-list__item > .m-text {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 1450px) {
-  .advantages-list__item > .m-text {
-    font-size: 14px;
+@media (max-width: 996px) {
+  .advantages-buying {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -95,13 +99,12 @@ $icons: (
   }
   &__item::before {
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     margin-bottom: 16px;
-    padding-top: 5px;
-    width: 60px;
+    min-width: 60px;
     height: 60px;
     border: 3px solid rgba(250, 0, 44, 0.15);
   }
@@ -119,6 +122,27 @@ $icons: (
   }
 }
 
+@media (max-width: 1260px) {
+  .advantages-list {
+    grid-template-rows: repeat(8, max-content);
+    grid-template-columns: 1fr;
+    &__item {
+      display:flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &__item::before {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 996px) {
+  .advantages-list {
+    order: -2;
+  }
+}
+
 .audi {
   position: absolute;
   top: 550px;
@@ -133,6 +157,22 @@ $icons: (
   }
 }
 
+@media (max-width: 1260px) {
+  .application-form {
+    padding: 30px 40px 30px 40px;
+    max-width: 401px;
+    &__title {
+      font-size: 40px;
+      line-height: 35px;
+      font-weight: 700;
+      &__desc {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+  }
+}
 
 .popular-korea {
   padding-top: 175px;

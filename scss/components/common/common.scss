@@ -31,12 +31,27 @@ video {
   padding: 0 140px;
   max-width: fit-content;
   margin: 0 auto;
+}
 
+.subtitle {
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 700;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 @media (max-width: 1450px) {
   .container {
     padding: 0 100px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 70px;
   }
 }
 

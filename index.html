@@ -36,7 +36,7 @@
                 <a class="menu__list-link" href="#">Авто из Китая</a>
               </li>
               <li class="menu-list__item">
-                <a class="menu__list-link menu__list-link--nowrap" href="#">О нас</a>
+                <a class="menu__list-link nowrap" href="#">О нас</a>
               </li>
               <li class="menu-list__item">
                 <a class="menu__list-link" href="#">Контакты</a>
@@ -54,7 +54,8 @@
 
         <div class="intro__content">
           <div class="application-processing">
-            <h1 class="intro-title">Автомобили под заказ</h1>
+            <h1 class="intro-title">
+            </h1>
             <div
               class="application-processing-list application-processing__description"
             >
@@ -67,23 +68,22 @@
               </p>
             </div>
             <div class="contact-buttons application-processing__contact">
-              <a class="contact-buttons__get-consult-btn"
-                >Получить консультацию</a
-              >
-              <div class="social-network-btn">
-                <img
-                  class="social-network-btn__img"
-                  src="img/telegram-icon.svg"
-                  alt="Связаться в telegram"
-                />
+              <a class="contact-buttons__get-consult-btn">Получить консультацию</a>
+              <div class="contact-buttons__wrap">
+                <div class="social-network-btn">
+                  <img
+                    class="social-network-btn__img"
+                    src="img/telegram-icon.svg"
+                    alt="Связаться в telegram"/>
+                </div>
+                <div class="social-network-btn">
+                  <img
+                    class="social-network-btn__img"
+                    src="img/youtube-icon.svg"
+                    alt="Смотреть в youtube"/>
+                </div>
               </div>
-              <div class="social-network-btn">
-                <img
-                  class="social-network-btn__img"
-                  src="img/youtube-icon.svg"
-                  alt="Смотреть в youtube"
-                />
-              </div>
+
             </div>
           </div>
           <div class="preview">
@@ -135,7 +135,7 @@
           </li>
           <li class="process-order-section process-order-list__item">
             <p
-              class="process-order-section__number process-order-section__number--bot-section"
+              class="process-order-section__number"
             >
               5
             </p>
@@ -145,7 +145,7 @@
           </li>
           <li class="process-order-section process-order-list__item">
             <p
-              class="process-order-section__number process-order-section__number--bot-section"
+              class="process-order-section__number"
             >
               6
             </p>
@@ -153,7 +153,7 @@
           </li>
           <li class="process-order-section process-order-list__item">
             <p
-              class="process-order-section__number process-order-section__number--bot-section"
+              class="process-order-section__number"
             >
               7
             </p>
@@ -165,7 +165,7 @@
             class="process-order-section process-order-list__item process-order-list__item--accent"
           >
             <p
-              class="process-order-section__number process-order-section__number--bot-section"
+              class="process-order-section__number"
             >
               8
             </p>
@@ -517,13 +517,9 @@
               Итоговая стоимость а/м под ключ
             </p>
             <p
-              class="calculate-final-cost__price calculate-final-cost__price--red"
-            >
+              class="calculate-final-cost__price calculate-final-cost__price--red">
               3 280 000
-              <span
-                class="calculate-final-cost__small-text calculate-final-cost__price--red"
-                >руб</span
-              >
+              <span class="calculate-final-cost__small-text calculate-final-cost__price--red">руб</span>
             </p>
             <p class="calculate-final-cost__info">
               Стоимость аналогичного а/м в РФ
@@ -732,9 +728,8 @@
               <div class="map">
                 <div class="map-contain">
                   <iframe
+                  class="map-contain__frame"
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A4b9a01429dfb6b42e87a40a7069b881e86ac93786a21cc71005ae6cde51556f4&amp;source=constructor"
-                    width="658"
-                    height="320"
                     frameborder="0"
                   ></iframe>
                 </div>
@@ -754,9 +749,8 @@
               <div class="map">
                 <div class="map-contain">
                   <iframe
+                    class="map-contain__frame"
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d820.9262026701373!2d50.17367273071663!3d53.200496140567665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDEyJzAyLjQiTiA1MMKwMTAnMjYuNCJF!5e0!3m2!1sru!2sru!4v1677504138513!5m2!1sru!2sru"
-                    width="658"
-                    height="320"
                     style="border: 0"
                     allowfullscreen=""
                     loading="lazy"
@@ -807,7 +801,7 @@
               <a class="footer-menu__link" href="#">Авто из Казахстана</a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">О компании</a>
+              <a class="footer-menu__link nowrap" href="#">О компании</a>
             </li>
             <li class="footer-menu__item">
               <a class="footer-menu__link" href="#">Авто из ОАЭ</a>

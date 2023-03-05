@@ -16,11 +16,22 @@
   }
 }
 
-.korea-advantages__wrap {
-  padding-top: 46px;
-  display: flex;
-  justify-content: center;
-  gap: 28px;
+.korea-advantages {
+  &__wrap {
+    padding-top: 46px;
+    display: flex;
+    justify-content: center;
+
+    gap: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .korea-advantages {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .korea-advantages-list {
@@ -59,10 +70,9 @@
   }
 }
 
-
 @media (max-width: 1200px) {
   .korea-advantages-list {
-    grid-template-columns: repeat(1, max-content);
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
 
@@ -160,7 +170,6 @@
   }
 }
 
-
 .garant {
   padding-top: 31px;
   &__text {
@@ -195,8 +204,8 @@
   }
 }
 
-
 .consultation {
+  margin: 0 auto;
   padding: 63px 0 73px 65px;
   background: linear-gradient(
       -28.32deg,
@@ -266,12 +275,36 @@
   border-radius: 36px;
   padding: 25px 24px 44px;
   &__contact {
-    padding: 34px 48px 0;
+    padding-top: 34px;
   }
 }
 
 .map-contain {
   position: relative;
+}
+
+.map-contain__frame {
+  width: 660px;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 996px) {
+  .map-contain__frame  {
+    width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-contain__frame  {
+    width: 480px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-contain__frame  {
+    width: 380px;
+  }
 }
 
 .map-connect {
@@ -286,6 +319,12 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
+  }
+}
+
+@media (max-width: 996px) {
+  .map-connect  {
+    flex-wrap: wrap;
   }
 }
 

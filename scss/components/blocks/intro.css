@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .intro {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url("../../../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
@@ -12,6 +13,12 @@
   gap: 73px;
   padding-top: 61px;
 }
+
+@media (max-width: 768px) {
+  .intro__content {
+    padding-top: 31px;
+  }
+}
 .intro-title {
   font-size: 70px;
   line-height: 90px;
@@ -20,6 +27,18 @@
   text-transform: uppercase;
 }
 
+.intro-title::before {
+  content: "Автомобили под заказ";
+}
+
+@media (max-width: 768px) {
+  .intro-title::before {
+    content: "Авто\aпод заказ";
+    white-space: pre;
+    font-size: 60px;
+    line-height: 56px;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -48,9 +67,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.menu__list-link--nowrap {
-  white-space: nowrap;
 }
 
 .phone-btn {
@@ -88,7 +104,7 @@
   }
 }
 .application-processing {
-  padding: 52px 0 32px 58px;
+  padding: 52px 58px 32px 58px;
   background-color: rgba(255, 255, 255, 0.64);
   border-radius: 24px;
   border: 1px solid #fff;
@@ -97,6 +113,12 @@
 }
 .application-processing__description {
   padding: 39px 0 41px 0;
+}
+
+@media (max-width: 768px) {
+  .application-processing {
+    padding: 32px 38px 22px 38px;
+  }
 }
 .application-processing-list__item {
   margin-bottom: 13px;
@@ -130,7 +152,17 @@
   font-weight: bold;
   font-size: 18px;
 }
+.contact-buttons__wrap {
+  display: flex;
+  gap: 10px;
+}
 
+@media (max-width: 800px) {
+  .contact-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .social-network-btn {
   display: flex;
   align-items: center;
@@ -149,6 +181,11 @@
   padding-top: 134px;
 }
 
+@media (max-width: 1024px) {
+  .preview {
+    display: none;
+  }
+}
 .play-block {
   display: flex;
   flex-direction: column;
@@ -172,4 +209,38 @@
   line-height: 24px;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  .header__menu-burger {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    display: block;
+  }
+  .header__menu-burger span,
+  .header__menu-burger:after,
+  .header__menu-burger:before {
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background: #fa002c;
+    margin: 0 auto;
+  }
+  .header__menu-burger span {
+    top: 15px;
+  }
+  .header__menu-burger:after,
+  .header__menu-burger:before {
+    content: "";
+  }
+  .header__menu-burger:after {
+    bottom: 3px;
+  }
+  .header__menu-burger:before {
+    top: 3px;
+  }
 }/*# sourceMappingURL=intro.css.map */
