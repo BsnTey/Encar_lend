@@ -29,13 +29,13 @@ $icons: (
   background-size: cover;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .advantages-buying {
     padding: 44px 58px 0 58px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .advantages-list__item > .m-text {
     font-size: 14px;
   }
@@ -113,7 +113,7 @@ $icons: (
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .advantages-list {
     row-gap: 20px;
   }
@@ -127,7 +127,7 @@ $icons: (
   content: url("../../../img/audi.png");
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .audi {
     display: none;
   }
@@ -148,7 +148,7 @@ $icons: (
   gap: 28px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .popular-car-list {
     flex-wrap: wrap;
   }

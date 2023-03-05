@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   min-height: 840px;
   background-size: cover;
+  overflow: hidden;
   &__content {
     position: relative;
     display: flex;
@@ -54,8 +55,6 @@
   }
 }
 
-
-
 .phone-btn {
   color: white;
   background-color: #fa002c;
@@ -81,6 +80,7 @@
 .carnival {
   content: url("../../../img/carnival.png");
   position: absolute;
+  overflow: hidden;
   top: 230px;
   left: 540px;
   z-index: 2;
