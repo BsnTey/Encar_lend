@@ -23,16 +23,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .menu-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 48px;
   list-style: none;
 }
 
+@media (max-width: 1200px) {
+  .menu-list {
+    gap: 28px;
+  }
+}
 .menu__list-link {
   font-size: medium;
   font-size: 16px;
@@ -40,6 +47,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.menu__list-link--nowrap {
+  white-space: nowrap;
 }
 
 .phone-btn {
@@ -50,12 +60,18 @@
   font-weight: bold;
   font-size: 18px;
   padding: 15px 28px;
+  white-space: nowrap;
 }
 .phone-btn__img {
   width: 20px;
   margin-right: 6px;
 }
 
+@media (max-width: 1200px) {
+  .header__btn {
+    display: none;
+  }
+}
 .carnival {
   content: url("../../../img/carnival.png");
   position: absolute;
@@ -64,16 +80,20 @@
   z-index: 2;
 }
 
+@media (max-width: 1200px) {
+  .carnival {
+    display: none;
+  }
+}
 .application-processing {
   padding: 52px 0 32px 58px;
   background-color: rgba(255, 255, 255, 0.64);
   border-radius: 24px;
   border: 1px solid #fff;
   box-sizing: border-box;
-  width: 709px;
+  max-width: 709px;
 }
 .application-processing__description {
-  max-width: 450px;
   padding: 39px 0 41px 0;
 }
 .application-processing-list__item {

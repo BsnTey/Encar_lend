@@ -19,6 +19,7 @@ $icons: (
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 40px;
   padding: 84px 58px 0 58px;
   border-radius: 36px;
   border: 2px solid #d6a7af;
@@ -26,6 +27,18 @@ $icons: (
   background-repeat: no-repeat;
   min-height: 840px;
   background-size: cover;
+}
+
+@media (max-width: 1200px) {
+  .advantages-buying {
+    padding: 44px 58px 0 58px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .advantages-list__item > .m-text {
+    font-size: 14px;
+  }
 }
 
 .application-form {
@@ -76,6 +89,7 @@ $icons: (
   column-gap: 45px;
   row-gap: 50px;
   list-style-type: none;
+  z-index: 5;
   &__item {
     max-width: 310px;
   }
@@ -99,6 +113,12 @@ $icons: (
   }
 }
 
+@media (max-width: 1200px) {
+  .advantages-list {
+    row-gap: 20px;
+  }
+}
+
 .audi {
   position: absolute;
   top: 550px;
@@ -106,6 +126,13 @@ $icons: (
   z-index: 2;
   content: url("../../../img/audi.png");
 }
+
+@media (max-width: 1200px) {
+  .audi {
+    display: none;
+  }
+}
+
 
 .popular-korea {
   padding-top: 175px;
@@ -117,7 +144,14 @@ $icons: (
 
 .popular-car-list {
   display: flex;
+  justify-content: center;
   gap: 28px;
+}
+
+@media (max-width: 1200px) {
+  .popular-car-list {
+    flex-wrap: wrap;
+  }
 }
 
 .card-item {

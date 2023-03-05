@@ -19,6 +19,7 @@
 .korea-advantages__wrap {
   padding-top: 46px;
   display: flex;
+  justify-content: center;
   gap: 28px;
 }
 
@@ -52,11 +53,19 @@
   }
 }
 
+
+@media (max-width: 1200px) {
+  .korea-advantages-list {
+    grid-template-columns: repeat(1, max-content);
+  }
+}
+
 .korea-advantages__card {
   background: #ffffff;
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
   border-radius: 36px;
   align-self: flex-start;
+  max-width: fit-content;
 }
 
 .korea-advantages-photo {
@@ -65,6 +74,7 @@
 
 .description-card {
   padding: 24px 32px 30px 32px;
+  max-width: 430px;
   &__title {
     font-weight: 700;
     font-size: 24px;
@@ -136,6 +146,15 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .question-answer-content {
+    &__text {
+      font-size: 21px;
+    }
+  }
+}
+
+
 .garant {
   padding-top: 31px;
   &__text {
@@ -162,8 +181,17 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .garant {
+    &__text {
+      font-size: 21px;
+    }
+  }
+}
+
+
 .consultation {
-  padding: 63px 500px 73px 65px;
+  padding: 63px 0 73px 65px;
   background: linear-gradient(
       -28.32deg,
       #ffffff 0%,
@@ -174,6 +202,9 @@
   border: 7px solid #e7e7e7;
   border-radius: 36px;
   position: relative;
+  &__title {
+    max-width: 660px;
+  }
   &__title span {
     color: #fa002c;
   }
@@ -200,10 +231,23 @@
   content: url(../../../img/hyundai.png);
 }
 
+@media (max-width: 1200px) {
+  .hyundai {
+    display: none;
+  }
+}
+
 .maps {
   padding-top: 32px;
   display: flex;
+  justify-content: center;
   gap: 28px;
+}
+
+@media (max-width: 1200px) {
+  .maps {
+    flex-wrap: wrap;
+  }
 }
 
 .map {

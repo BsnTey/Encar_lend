@@ -30,7 +30,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-right: 60px;
 }
 .process-order-list__item--accent {
   margin: -2px;
@@ -79,4 +78,17 @@
 }
 .process-order-section__desc {
   max-width: 260px;
+}
+
+@media (max-width: 1200px) {
+  .process-order-section__number::after {
+    top: 13%;
+    width: 50%;
+  }
+  .process-order-section__number--bot-section:after {
+    top: 30%;
+  }
+  .process-order-section__desc {
+    max-width: 230px;
+  }
 }/*# sourceMappingURL=process-order.css.map */
