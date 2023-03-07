@@ -3,6 +3,15 @@
   padding-bottom: 100px;
 }
 
+@media (max-width: 620px) {
+  .container {
+    &__process-order {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
 .process-order {
   background-color: #f4f6f8;
   &__title {
@@ -13,37 +22,46 @@
     font-size: 24px;
     font-weight: 500;
   }
-  &-list {
-    padding-top: 70px;
-    display: grid;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  &-list__item {
+}
+
+.process-order-list {
+  padding-top: 70px;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  &__item {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
-
-  &-list__item--accent {
+  &__item--accent {
     margin: -2px;
     background-color: #fff;
     border-radius: 22px;
     border: none !important;
   }
-
-  &-list__item:nth-child(4n) {
+  &__item:nth-child(4n) {
     border-right: none;
   }
-  &-list__item:nth-child(n + 5):nth-child(-n + 8) {
+  &__item:nth-child(n + 5):nth-child(-n + 8) {
     padding-top: 51px;
   }
-  &-list__item:nth-child(n + 5):nth-child(-n + 8) {
+  &__item:nth-child(n + 5):nth-child(-n + 8) {
     padding-top: 51px;
     padding-bottom: 24px;
   }
-  &-list__item:nth-child(4n + 1) {
+  &__item:nth-child(4n + 1) {
     padding-left: 0px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .process-order {
+    &__title-add {
+      display: block;
+      margin-top: 14px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -97,27 +115,25 @@
 }
 
 @media (max-width: 1200px) {
-  .process-order {
-    &-list {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    &-list__item:nth-child(3n) {
+  .process-order-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    &__item:nth-child(3n) {
       border-right: none;
     }
-    &-list__item:nth-child(4n) {
+    &__item:nth-child(4n) {
       border-right: 2px dashed #d6a7af;
     }
-    &-list__item:nth-child(n + 4):nth-child(-n + 8) {
+    &__item:nth-child(n + 4):nth-child(-n + 8) {
       padding-top: 51px;
     }
-    &-list__item:nth-child(n + 4):nth-child(-n + 8) {
+    &__item:nth-child(n + 4):nth-child(-n + 8) {
       padding-top: 51px;
       padding-bottom: 24px;
     }
-    &-list__item:nth-child(4n + 1) {
+    &__item:nth-child(4n + 1) {
       padding-left: 40px !important;
     }
-    &-list__item:nth-child(3n + 1) {
+    &__item:nth-child(3n + 1) {
       padding-left: 0px !important;
     }
   }
@@ -131,28 +147,26 @@
 }
 
 @media (max-width: 996px) {
-  .process-order {
-    &-list {
-      grid-template-columns: 1fr 1fr;
-    }
-    &-list__item:nth-child(2n) {
+  .process-order-list {
+    grid-template-columns: 1fr 1fr;
+    &__item:nth-child(2n) {
       border-right: none;
     }
-    &-list__item:nth-child(3) {
+    &__item:nth-child(3) {
       border-right: 2px dashed #d6a7af;
     }
-    &-list__item:nth-child(4) {
+    &__item:nth-child(4) {
       padding-left: 40px !important;
     }
-    &-list__item:nth-child(1) {
+    &__item:nth-child(1) {
       padding-top: 0 !important;
     }
-    &-list__item:nth-child(odd) {
+    &__item:nth-child(odd) {
       padding-left: 0;
       padding-top: 51px;
       padding-bottom: 24px;
     }
-    &-list__item:nth-child(5) {
+    &__item:nth-child(5) {
       padding-left: 0 !important;
     }
   }
@@ -172,5 +186,58 @@
   }
   .process-order-section:nth-child(4) .process-order-section__number:after {
     top: 30%;
+  }
+}
+
+@media (max-width: 620px) {
+  .process-order-list {
+    padding-top: 28px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    position: relative;
+    left: 20px;
+    &__item {
+      padding: 0 !important;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+    &__item:nth-child(3) {
+      border-right: none;
+    }
+    &__item:nth-child(4) {
+      padding: 0 !important;
+    }
+    &__item--accent {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .process-order-section {
+    padding: 0;
+    border-bottom: none;
+    border-right: none;
+    &__number {
+      width: 42px;
+    }
+    &__number::before {
+      content: "";
+      background-color: #ff0000;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      float: left;
+      position: relative;
+      top: 38px;
+      right: 20px;
+    }
+    &__number::after {
+      display: none;
+    }
+    &__desc {
+      max-width: 280px;
+    }
   }
 }

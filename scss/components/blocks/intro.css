@@ -14,9 +14,22 @@
   padding-top: 61px;
 }
 
+@media (max-width: 620px) {
+  .intro {
+    min-height: 630px;
+  }
+}
 @media (max-width: 768px) {
   .intro__content {
     padding-top: 31px;
+  }
+}
+@media (max-width: 620px) {
+  .header {
+    margin-top: 12px;
+  }
+  .intro__content {
+    padding-top: 25px;
   }
 }
 .intro-title {
@@ -32,11 +45,21 @@
 }
 
 @media (max-width: 768px) {
+  .intro-title {
+    line-height: 56px;
+  }
   .intro-title::before {
     content: "Авто\aпод заказ";
     white-space: pre;
     font-size: 60px;
+  }
+}
+@media (max-width: 620px) {
+  .intro-title {
     line-height: 56px;
+  }
+  .intro-title::before {
+    font-size: 46px;
   }
 }
 .header {
@@ -119,6 +142,14 @@
   .application-processing {
     padding: 32px 38px 22px 38px;
   }
+  .application-processing__description {
+    padding: 30px 0 30px 0;
+  }
+}
+@media (max-width: 620px) {
+  .application-processing {
+    all: unset;
+  }
 }
 .application-processing-list__item {
   margin-bottom: 13px;
@@ -138,6 +169,12 @@
   left: 12px;
 }
 
+@media (max-width: 620px) {
+  .application-processing-list__item {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+}
 .contact-buttons {
   display: flex;
   align-items: center;
@@ -163,6 +200,11 @@
     justify-content: center;
   }
 }
+@media (max-width: 620px) {
+  .contact-buttons__get-consult-btn {
+    padding: 23px 50px;
+  }
+}
 .social-network-btn {
   display: flex;
   align-items: center;
@@ -176,6 +218,14 @@
   display: block;
 }
 
+@media (max-width: 620px) {
+  .social-network-btn {
+    width: 72px;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #FFFFFF;
+  }
+}
 .preview {
   z-index: 3;
   padding-top: 134px;
