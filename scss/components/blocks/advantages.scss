@@ -14,6 +14,12 @@ $icons: (
   background-color: #fff;
 }
 
+@media (max-width: 620px) {
+  .advantages {
+    padding: 68px 0 86px;
+  }
+}
+
 .advantages-buying {
   position: relative;
   display: flex;
@@ -62,7 +68,7 @@ $icons: (
     max-width: 410px;
   }
   &__wrap {
-    padding-top: 37px;
+    margin-top: 37px;
   }
 }
 
@@ -82,6 +88,22 @@ $icons: (
   }
 }
 
+@media (max-width: 996px) {
+  .application-form {
+    max-width: 600px;
+    &__wrap {
+      background: linear-gradient(
+          180deg,
+          #ffffff 50%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../../../img/audi-back-mobile.png");
+      background-size: 100% 100%;
+      padding-bottom: 300px;
+    }
+  }
+}
+
 @media (max-width: 620px) {
   .application-form {
     box-shadow: none;
@@ -96,8 +118,6 @@ $icons: (
       font-size: 14px;
     }
     &__wrap {
-      background: linear-gradient(180deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%), url("../../../img/audi-back-mobile.png");
-      background-size: 100% 100%;
       padding-bottom: 250px;
     }
   }
@@ -126,6 +146,14 @@ $icons: (
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 996px) {
+  .getconsult {
+    &__input {
+      max-width: 420px;
+    }
   }
 }
 
@@ -191,11 +219,8 @@ $icons: (
 @media (max-width: 996px) {
   .advantages-list {
     order: -2;
-  }
-}
-
-@media (max-width: 620px) {
-  .advantages-list {
+    grid-template-rows: repeat(4, max-content);
+    grid-template-columns: 1fr 1fr;
     &__item {
       padding: 20px;
       background: #ffffff;
@@ -206,6 +231,13 @@ $icons: (
       gap: 16px;
       max-width: 330px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages-list {
+    grid-template-rows: repeat(8, max-content);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -229,12 +261,18 @@ $icons: (
 
 @media (max-width: 660px) {
   .popular-korea {
-    padding-top: 20px;
+    padding-top: 70px;
   }
 }
 
 .popular-car-wrap {
   margin-top: 32px;
+}
+
+@media (max-width: 660px) {
+  .popular-car-wrap {
+    margin-top: 20px;
+  }
 }
 
 .popular-car-list {
@@ -261,13 +299,40 @@ $icons: (
   }
 }
 
+@media (max-width: 620px) {
+  .card-item {
+    padding-bottom: 16px;
+    max-width: 308px;
+    &__btn {
+      padding: 16px 16px 0;
+    }
+  }
+}
+
 .card-item-photo {
   padding: 15px 15px 0;
 }
 
+@media (max-width: 620px) {
+  .popular-car-list {
+    padding: 6px 6px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .card-photo-wrap {
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
 .description-car {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin: 0 7px 0;
-  padding: 25px 25px;
+  padding: 25px;
   border-bottom: 1px solid #c1c1c1;
   &__title {
     font-style: normal;
@@ -275,8 +340,16 @@ $icons: (
     font-size: 24px;
     line-height: 34px;
   }
-  &__list {
-    margin-top: 16px;
+}
+
+@media (max-width: 620px) {
+  .description-car {
+    margin: 0;
+    padding: 14px 16px 20px;
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -311,10 +384,31 @@ $icons: (
   }
 }
 
+@media (max-width: 620px) {
+  .technical-parameters {
+    justify-content: space-between;
+    &__item-title {
+      width: fit-content;
+      flex-grow: 1;
+    }
+    &__item-value {
+      width: fit-content;
+    }
+  }
+}
+
 .car-price-wrap {
   display: flex;
   justify-content: space-between;
   padding: 0 7px 0 7px;
+}
+
+@media (max-width: 620px) {
+  .car-price-wrap {
+    flex-wrap: wrap;
+    // justify-content: flex-start;
+    padding: 0;
+  }
 }
 
 .car-price {
@@ -344,15 +438,40 @@ $icons: (
   }
 }
 
-.btn-analog-wrap__analog-btn {
-  display: block;
-  padding: 24px 46px;
-  box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
-  text-align: center;
-  color: white;
-  background-color: #fa002c;
-  border-radius: 14px;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
+@media (max-width: 620px) {
+  .car-price {
+    padding: 24px 0 16px 16px;
+    &__desc {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    &--selected {
+      margin-top: 0;
+      border-radius: 0 25px 25px 0;
+      padding: 16px 21px 16px 16px;
+    }
+  }
+}
+
+.btn-analog-wrap {
+  &__analog-btn {
+    display: block;
+    padding: 24px 46px;
+    box-shadow: 0px 12px 60px rgba(250, 0, 44, 0.4);
+    text-align: center;
+    color: white;
+    background-color: #fa002c;
+    border-radius: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 620px) {
+  .btn-analog-wrap {
+    &__analog-btn {
+      padding: 15px 40px;
+    }
+}
 }

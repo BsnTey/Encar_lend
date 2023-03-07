@@ -16,6 +16,11 @@
     align-items: center;
   }
 }
+@media (max-width: 400px) {
+  .footer__wrap {
+    align-items: start;
+  }
+}
 .copywrite {
   max-width: 430px;
   display: flex;
@@ -57,10 +62,25 @@
     order: 1;
   }
 }
+@media (max-width: 620px) {
+  .footer-menu {
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
 .contact {
-  width: 240px;
+  width: 100%;
 }
 
 .address {
+  width: 240px;
   margin-top: 16px;
+}
+
+@media (max-width: 450px) {
+  .footer__btn {
+    display: block;
+    text-align: center;
+  }
 }/*# sourceMappingURL=footer.css.map */

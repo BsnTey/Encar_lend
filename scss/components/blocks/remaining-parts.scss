@@ -16,12 +16,35 @@
   }
 }
 
+@media (max-width: 992px) {
+  .remaining-parts {
+    padding-top: 60px;
+    padding-bottom: 78px;
+  }
+}
+
+@media (max-width: 620px) {
+  .remaining-parts {
+    &__video {
+      padding-top: 40px;
+    }
+    &__question-answer {
+      padding-top: 60px;
+    }
+    &__consultation {
+      padding-top: 63px;
+    }
+    &__contacts {
+      padding-top: 40px;
+    }
+  }
+}
+
 .korea-advantages {
   &__wrap {
     padding-top: 46px;
     display: flex;
     justify-content: center;
-
     gap: 28px;
   }
 }
@@ -76,21 +99,45 @@
   }
 }
 
+@media (max-width: 620px) {
+  .korea-advantages-list {
+    display: none;
+    &__wrap {
+      padding-top: 24px;
+    }
+  }
+}
+
 .korea-advantages__card {
   background: #ffffff;
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
   border-radius: 36px;
   align-self: flex-start;
-  max-width: fit-content;
+  max-width: 460px;
+}
+
+@media (max-width: 620px) {
+  .korea-advantages__card {
+    border-radius: 24px;
+    max-width: 300px;
+  }
 }
 
 .korea-advantages-photo {
   padding: 15px 15px 0 15px;
 }
 
+@media (max-width: 620px) {
+  .korea-advantages-photo {
+    padding: 6px 6px 0 6px;
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
 .description-card {
   padding: 24px 32px 30px 32px;
-  max-width: 430px;
   &__title {
     font-weight: 700;
     font-size: 24px;
@@ -98,6 +145,20 @@
   }
   &__text {
     margin-top: 14px;
+  }
+}
+
+@media (max-width: 620px) {
+  .description-card {
+    padding: 20px 16px 24px;
+    &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &__text {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -125,13 +186,28 @@
   }
 }
 
-.example-video__desc-video {
-  margin-top: 16px;
+.example-video {
+  &__desc-video {
+    margin-top: 16px;
+  }
+  &__mp4 {
+    margin-top: 44px;
+    border-radius: 40px;
+  }
 }
 
-.example-video__mp4 {
-  margin-top: 44px;
-  border-radius: 40px;
+@media (max-width: 620px) {
+  .example-video {
+    &__desc-video {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__mp4 {
+      margin-top: 30px;
+      border-radius: 24px;
+    }
+  }
 }
 
 .question-answer-list {
@@ -165,7 +241,16 @@
 @media (max-width: 1200px) {
   .question-answer-content {
     &__text {
-      font-size: 21px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .question-answer-content {
+    padding: 24px 0 24px;
+    &__text {
+      padding-left: 35px;
     }
   }
 }
@@ -181,17 +266,15 @@
     position: relative;
   }
   &__text:before {
-    content: url(../../../img/checkbox.svg);
+    content: " ";
+    background: #fa002c url(../../../img/checkbox.svg) no-repeat;
+    background-size: 60%;
+    background-position: 50% 50%;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-    align-items: center;
     left: 0;
     border-radius: 10px;
     width: 60px;
-    height: 55px;
-    background: #fa002c;
+    height: 60px;
     box-shadow: 0px 12px 40px rgba(250, 0, 44, 0.4);
   }
 }
@@ -199,7 +282,21 @@
 @media (max-width: 1200px) {
   .garant {
     &__text {
-      font-size: 21px;
+      font-size: 20px;
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .garant {
+    &__text::before {
+      display: block;
+      position: relative;
+      bottom: 10px;
+      border-radius: 6px;
+      width: 36px;
+      height: 36px;
     }
   }
 }
@@ -236,6 +333,27 @@
   }
 }
 
+@media (max-width: 620px) {
+  .consultation {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__btn {
+      background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../../../img/hyundai-back-mobile.png.png") no-repeat;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      background-size: cover;
+      border-radius: 24px;
+      min-height: 300px;
+    }
+  }
+}
+
 .contact-buttons__get-consult-btn--less {
   font-size: 16px;
   border-radius: 14px;
@@ -269,6 +387,13 @@
   }
 }
 
+@media (max-width: 620px) {
+  .maps {
+    padding-top: 20px;
+    gap: 16px;
+  }
+}
+
 .map {
   box-sizing: border-box;
   border: 7px solid rgba(250, 0, 44, 0.2);
@@ -276,6 +401,16 @@
   padding: 25px 24px 44px;
   &__contact {
     padding-top: 34px;
+  }
+}
+
+@media (max-width: 620px) {
+  .map {
+    border-radius: 24px;
+    padding: 5px 5px 17px 5px;
+    &__contact {
+      padding-top: 4px;
+    }
   }
 }
 
@@ -290,20 +425,26 @@
 }
 
 @media (max-width: 996px) {
-  .map-contain__frame  {
+  .map-contain__frame {
     width: 560px;
   }
 }
 
 @media (max-width: 768px) {
-  .map-contain__frame  {
+  .map-contain__frame {
     width: 480px;
   }
 }
 
 @media (max-width: 576px) {
-  .map-contain__frame  {
+  .map-contain__frame {
     width: 380px;
+  }
+}
+@media (max-width: 450px) {
+  .map-contain__frame {
+    width: 304px;
+    height: 320px;
   }
 }
 
@@ -323,8 +464,22 @@
 }
 
 @media (max-width: 996px) {
-  .map-connect  {
+  .map-connect {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .map-connect {
+    &__office {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &__phone {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 

@@ -3,10 +3,22 @@
   padding-bottom: 100px;
 }
 
+@media (max-width: 620px) {
+  .container-calculate {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
 .calculate {
   background-color: #f4f6f8;
   &__title {
     max-width: 800px;
+  }
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -56,32 +68,52 @@
   }
 }
 
-.calculate-list-item__subtitle {
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 37px;
+@media (max-width: 620px) {
+  .calculate-list {
+    grid-template-rows: auto;
+    &__item {
+      padding: 28px 20px;
+      max-width: 330px;
+      justify-content: start;
+      gap: 30px;
+    }
+  }
 }
 
-.calculate-list-item__desc {
-  margin-top: 16px;
+.calculate-list-item {
+  &__subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  &__desc {
+    margin-top: 16px;
+  }
+  &__price {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  &__price span {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 73px;
+  }
 }
 
-.calculate-list-item__price {
-  margin-top: 12px;
-  font-weight: 600;
-  font-size: 36px;
-}
-
-.calculate-list-item__price span {
-  font-weight: 600;
-  font-size: 60px;
-  line-height: 73px;
-}
-
-.calculate__price {
-  margin-top: 24px;
-  display: flex;
-  justify-content: flex-end;
+@media (max-width: 620px) {
+  .calculate-list-item {
+    &__subtitle {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &__desc {
+      margin-top: 12px;
+    }
+    &__price {
+      margin-top: 0;
+    }
+  }
 }
 
 .calculate-final-cost {
@@ -137,7 +169,6 @@
       margin: 0;
     }
   }
-
   .calculate-final-cost p:nth-child(1) {
     grid-row: 2;
   }
@@ -149,5 +180,22 @@
   }
   .calculate-final-cost p:nth-child(4) {
     grid-row: 3;
+  }
+}
+
+@media (max-width: 620px) {
+  .calculate-final-cost {
+    &__info {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__price {
+      font-size: 46px;
+      line-height: 56px;
+    }
+    &__small-text {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 }
