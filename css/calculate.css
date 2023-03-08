@@ -1,0 +1,184 @@
+.container-calculate {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 620px) {
+  .container-calculate {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.calculate {
+  background-color: #f4f6f8;
+}
+.calculate__title {
+  max-width: 800px;
+}
+.calculate__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculate-list {
+  margin-top: 42px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #c2c2c2;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.calculate-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 30px 36px 40px;
+  max-width: 461px;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 36px;
+}
+.calculate-list__item:hover {
+  background: radial-gradient(99.46% 139.68% at 15.4% 16.97%, #5e6b9a 0%, rgba(94, 107, 154, 0) 100%), url("../../../img/kia.png") no-repeat;
+}
+.calculate-list__item:hover * {
+  color: #fff;
+}
+
+@media (max-width: 1260px) {
+  .calculate-list {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 996px) {
+  .calculate-list {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+@media (max-width: 620px) {
+  .calculate-list {
+    grid-template-rows: auto;
+  }
+  .calculate-list__item {
+    padding: 28px 20px;
+    max-width: 330px;
+    justify-content: start;
+    gap: 30px;
+  }
+}
+.calculate-list-item__subtitle {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+.calculate-list-item__desc {
+  margin-top: 16px;
+}
+.calculate-list-item__price {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 36px;
+}
+.calculate-list-item__price span {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+
+@media (max-width: 620px) {
+  .calculate-list-item__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .calculate-list-item__desc {
+    margin-top: 12px;
+  }
+  .calculate-list-item__price {
+    margin-top: 0;
+  }
+}
+.calculate-final-cost {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 53px;
+  row-gap: 14px;
+  justify-content: flex-end;
+  justify-self: end;
+  align-items: center;
+  position: relative;
+}
+.calculate-final-cost__info {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  margin-left: 50px;
+}
+.calculate-final-cost__info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 6px;
+  margin: 15px 0 15px 0;
+  background: #fa002c;
+  border-radius: 1px;
+}
+.calculate-final-cost__price {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+.calculate-final-cost__price--red {
+  color: #fa002c;
+}
+.calculate-final-cost__small-text {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+@media (max-width: 1260px) {
+  .calculate-final-cost {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(1, max-content);
+    row-gap: 14px;
+  }
+  .calculate-final-cost__info {
+    margin: 0;
+  }
+  .calculate-final-cost__info::before {
+    display: none;
+    margin: 0;
+  }
+  .calculate-final-cost p:nth-child(1) {
+    grid-row: 2;
+  }
+  .calculate-final-cost p:nth-child(2) {
+    grid-row: 1;
+  }
+  .calculate-final-cost p:nth-child(3) {
+    grid-row: 4;
+  }
+  .calculate-final-cost p:nth-child(4) {
+    grid-row: 3;
+  }
+}
+@media (max-width: 620px) {
+  .calculate-final-cost__info {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .calculate-final-cost__price {
+    font-size: 46px;
+    line-height: 56px;
+  }
+  .calculate-final-cost__small-text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}/*# sourceMappingURL=calculate.css.map */
