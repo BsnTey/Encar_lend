@@ -283,13 +283,15 @@
   .garant {
     &__text {
       font-size: 20px;
-      padding-left: 0;
     }
   }
 }
 
 @media (max-width: 620px) {
   .garant {
+    &__text {
+      padding-left: 0;
+    }
     &__text::before {
       display: block;
       position: relative;
