@@ -41,6 +41,19 @@
 }
 
 .korea-advantages {
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    width: 100%;
+    padding: 40px;
+    &-wrap {
+      max-width: 460px;
+      background: #ffffff;
+      box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.12);
+      border-radius: 36px;
+    }
+  }
   &__wrap {
     padding-top: 46px;
     display: flex;
@@ -57,10 +70,48 @@
   }
 }
 
+@media (max-width: 620px) {
+  .korea-advantages {
+    &__card {
+      &-wrap {
+        border-radius: 24px;
+      }
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  margin: 0 !important;
+}
+
+.swiper-button-prev::after {
+  content: "" !important;
+}
+
+.swiper-button-next::after {
+  content: "" !important;
+}
+
+.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fa002c !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px !important;
+  height: 14px !important;
+}
+
 .korea-advantages-list {
   display: grid;
-  grid-template-rows: repeat(7, max-content);
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   column-gap: 90px;
   list-style: none;
   &__item {
@@ -71,31 +122,55 @@
   &__item:last-child {
     border-bottom: none;
   }
-  &__text {
+  &__title {
     padding-left: 40px;
+    &--show {
+      padding-bottom: 20px;
+    }
   }
-  &__text::before {
+  &__title::before {
     content: "";
     position: absolute;
     left: 0;
-    width: 23px;
+    width: 24px;
     height: 6px;
     margin: 10px 25px 10px 0;
     background: #fa002c;
     border-radius: 1px;
   }
+  &__title::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 22px;
+    width: 6px;
+    height: 23px;
+    margin: 10px 25px 10px 0;
+    background: #fa002c;
+    border-radius: 1px;
+  }
+  &__text {
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1550px) {
   .korea-advantages-list {
     column-gap: 30px;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
 
 @media (max-width: 1200px) {
   .korea-advantages-list {
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .korea-advantages-list {
+    max-width: max-content;
   }
 }
 
@@ -105,21 +180,6 @@
     &__wrap {
       padding-top: 24px;
     }
-  }
-}
-
-.korea-advantages__card {
-  background: #ffffff;
-  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
-  border-radius: 36px;
-  align-self: flex-start;
-  max-width: 460px;
-}
-
-@media (max-width: 620px) {
-  .korea-advantages__card {
-    border-radius: 24px;
-    max-width: 300px;
   }
 }
 
@@ -168,14 +228,20 @@
   padding: 24px 0 0 0;
 }
 
+@media (max-width: 620px) {
+  .scroll-buttons {
+    display: none;
+  }
+}
+
 .back-next-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #d3d3d3;
-  border-radius: 60px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 60px !important;
+  height: 60px !important;
+  border: 1px solid #d3d3d3 !important;
+  border-radius: 60px !important;
   &:hover {
     border: 1px solid rgba(250, 0, 44, 1);
     filter: invert(10%) sepia(87%) saturate(6217%) hue-rotate(344deg)
@@ -219,28 +285,45 @@
   padding: 36px 0 36px;
   border-bottom: 1px solid #c2c2c2;
   position: relative;
-  &__text {
+  &__title {
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
     padding-left: 93px;
+    &--show {
+      padding-bottom: 20px;
+    }
   }
-  &__text::before {
+  &__title::before {
     content: "";
     position: absolute;
     left: 0;
-    width: 23px;
+    width: 24px;
     height: 6px;
     margin: 15px 25px 15px 0;
     background: #fa002c;
     border-radius: 1px;
   }
+  &__title::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 42px;
+    width: 6px;
+    height: 24px;
+    background: #fa002c;
+    border-radius: 1px;
+  }
+  &__text {
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1200px) {
   .question-answer-content {
-    &__text {
+    &__title {
       font-size: 20px;
     }
   }
@@ -249,8 +332,11 @@
 @media (max-width: 620px) {
   .question-answer-content {
     padding: 24px 0 24px;
-    &__text {
+    &__title {
       padding-left: 35px;
+    }
+    &__title::after {
+      top: 31px;
     }
   }
 }
@@ -316,10 +402,8 @@
   border: 7px solid #e7e7e7;
   border-radius: 36px;
   position: relative;
-  background-size: cover;
   max-width: 1450px;
   height: auto;
-  overflow: hidden;
   &__title {
     max-width: 660px;
   }
@@ -335,6 +419,12 @@
   }
 }
 
+@media (max-width: 996px) {
+  .consultation {
+    background-size: cover;
+  }
+}
+
 @media (max-width: 620px) {
   .consultation {
     all: unset;
@@ -347,7 +437,7 @@
           #ffffff 0%,
           rgba(255, 255, 255, 0) 100%
         ),
-        url("../../../img/hyundai-back-mobile.png.png") no-repeat;
+        url("../../../img/back-hyundai-mobile.png") no-repeat;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       background-size: cover;
       border-radius: 24px;

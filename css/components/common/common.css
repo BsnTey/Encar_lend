@@ -29,7 +29,6 @@ video {
 
 .container {
   padding: 0 140px;
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
@@ -78,6 +77,10 @@ video {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-} 
+}
+
+.no-pseudo-after::after {
+  content: none !important;
+}
 
 /*# sourceMappingURL=common.css.map */

@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <section class="intro">
@@ -43,10 +48,14 @@
               </li>
             </ul>
           </nav>
+          <p class="header__address small-text map-address__text">
+            Москва, ул. Семеновская д 14 офис 122
+          </p>
           <a class="phone-btn header__btn" href="tel:+7 (800) 011 11 11">
             <img class="phone-btn__img" src="img/handset.svg" />
             +7 (800) 011-11-11
           </a>
+
           <div class="header__menu-burger">
             <span></span>
           </div>
@@ -217,206 +226,233 @@
         <div class="popular-korea">
           <h2 class="subtitle popular-korea__title">Популярные а/м из Кореи</h2>
           <div class="popular-car-wrap">
-            <ul class="popular-car-list">
-              <li class="card-item popular-car-list__item">
-                <div class="card-item-photo">
-                  <img
-                    class="card-photo-wrap__img"
-                    src="img/kia-k5.jpg"
-                    alt="KIA K5"
-                  />
-                </div>
-                <div class="description-car card-item__info">
-                  <h3 class="description-car__title">KIA K5 (Optima)</h3>
-                  <div class="description-car__list">
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Пробег
-                      </dt>
-                      <dd class="technical-parameters__item-value">
-                        До 90 тыс. км.
-                      </dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Год выпуска
-                      </dt>
-                      <dd class="technical-parameters__item-value">2018</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Мощность
-                      </dt>
-                      <dd class="technical-parameters__item-value">163 л.с.</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Двигатель
-                      </dt>
-                      <dd class="technical-parameters__item-value">2.0 л</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Коробка
-                      </dt>
-                      <dd class="technical-parameters__item-value">Автомат</dd>
-                    </dl>
+            <div class="advantages-swiper-container swiper" data-mobile="false">
+              <ul class="popular-car-list swiper-wrapper">
+                <li class="card-item popular-car-list__item swiper-slide">
+                  <div class="card-item-photo">
+                    <img
+                      class="card-photo-wrap__img"
+                      src="img/kia-k5.jpg"
+                      alt="KIA K5"
+                    />
                   </div>
-                </div>
-
-                <div class="car-price-wrap">
-                  <div class="car-price">
-                    <p class="car-price__price">1 890 000 ₽</p>
-                    <p class="car-price__desc">Цена на вторичном рынке в РФ</p>
-                  </div>
-
-                  <div class="car-price car-price--selected">
-                    <p class="car-price__price car-price__price--selected">
-                      1 540 000 ₽
-                    </p>
-                    <p class="car-price__desc">Цена из Кореи во Владивостоке</p>
-                  </div>
-                </div>
-
-                <div class="btn-analog-wrap card-item__btn">
-                  <a class="btn-analog-wrap__analog-btn" href="#">
-                    Подобрать аналог
-                  </a>
-                </div>
-              </li>
-              <li class="card-item popular-car-list__item">
-                <div class="card-item-photo">
-                  <img
-                    class="card-photo-wrap__img"
-                    src="img/audi-A3.jpg"
-                    alt="KIA K5"
-                  />
-                </div>
-                <div class="description-car card-item__info">
-                  <h3 class="description-car__title">AUDI A3</h3>
-                  <div class="description-car__list">
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Пробег
-                      </dt>
-                      <dd class="technical-parameters__item-value">
-                        До 90 тыс. км.
-                      </dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Год выпуска
-                      </dt>
-                      <dd class="technical-parameters__item-value">2018</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Мощность
-                      </dt>
-                      <dd class="technical-parameters__item-value">163 л.с.</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Двигатель
-                      </dt>
-                      <dd class="technical-parameters__item-value">2.0 л</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Коробка
-                      </dt>
-                      <dd class="technical-parameters__item-value">Автомат</dd>
-                    </dl>
-                  </div>
-                </div>
-
-                <div class="car-price-wrap">
-                  <div class="car-price">
-                    <p class="car-price__price">1 890 000 ₽</p>
-                    <p class="car-price__desc">Цена на вторичном рынке в РФ</p>
+                  <div class="description-car card-item__info">
+                    <h3 class="description-car__title">KIA K5 (Optima)</h3>
+                    <div class="description-car__list">
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Пробег
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          До 90 тыс. км.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Год выпуска
+                        </dt>
+                        <dd class="technical-parameters__item-value">2018</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Мощность
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          163 л.с.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Двигатель
+                        </dt>
+                        <dd class="technical-parameters__item-value">2.0 л</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Коробка
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          Автомат
+                        </dd>
+                      </dl>
+                    </div>
                   </div>
 
-                  <div class="car-price car-price--selected">
-                    <p class="car-price__price car-price__price--selected">
-                      1 540 000 ₽
-                    </p>
-                    <p class="car-price__desc">Цена из Кореи во Владивостоке</p>
-                  </div>
-                </div>
+                  <div class="car-price-wrap">
+                    <div class="car-price">
+                      <p class="car-price__price">1 890 000 ₽</p>
+                      <p class="car-price__desc">
+                        Цена на вторичном рынке в РФ
+                      </p>
+                    </div>
 
-                <div class="btn-analog-wrap card-item__btn">
-                  <a class="btn-analog-wrap__analog-btn" href="#">
-                    Подобрать аналог
-                  </a>
-                </div>
-              </li>
-              <li class="card-item popular-car-list__item">
-                <div class="card-item-photo">
-                  <img
-                    class="card-photo-wrap__img"
-                    src="img/kia-k5.jpg"
-                    alt="KIA K5"
-                  />
-                </div>
-                <div class="description-car card-item__info">
-                  <h3 class="description-car__title">KIA K5 (Optima)</h3>
-                  <div class="description-car__list">
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Пробег
-                      </dt>
-                      <dd class="technical-parameters__item-value">
-                        До 90 тыс. км.
-                      </dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Год выпуска
-                      </dt>
-                      <dd class="technical-parameters__item-value">2018</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Мощность
-                      </dt>
-                      <dd class="technical-parameters__item-value">163 л.с.</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Двигатель
-                      </dt>
-                      <dd class="technical-parameters__item-value">2.0 л</dd>
-                    </dl>
-                    <dl class="technical-parameters">
-                      <dt class="small-text technical-parameters__item-title">
-                        Коробка
-                      </dt>
-                      <dd class="technical-parameters__item-value">Автомат</dd>
-                    </dl>
-                  </div>
-                </div>
-
-                <div class="car-price-wrap">
-                  <div class="car-price">
-                    <p class="car-price__price">1 890 000 ₽</p>
-                    <p class="car-price__desc">Цена на вторичном рынке в РФ</p>
+                    <div class="car-price car-price--selected">
+                      <p class="car-price__price car-price__price--selected">
+                        1 540 000 ₽
+                      </p>
+                      <p class="car-price__desc">
+                        Цена из Кореи во Владивостоке
+                      </p>
+                    </div>
                   </div>
 
-                  <div class="car-price car-price--selected">
-                    <p class="car-price__price car-price__price--selected">
-                      1 540 000 ₽
-                    </p>
-                    <p class="car-price__desc">Цена из Кореи во Владивостоке</p>
+                  <div class="btn-analog-wrap card-item__btn">
+                    <a class="btn-analog-wrap__analog-btn" href="#">
+                      Подобрать аналог
+                    </a>
                   </div>
-                </div>
+                </li>
+                <li class="card-item popular-car-list__item swiper-slide">
+                  <div class="card-item-photo">
+                    <img
+                      class="card-photo-wrap__img"
+                      src="img/audi-A3.jpg"
+                      alt="KIA K5"
+                    />
+                  </div>
+                  <div class="description-car card-item__info">
+                    <h3 class="description-car__title">AUDI A3</h3>
+                    <div class="description-car__list">
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Пробег
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          До 90 тыс. км.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Год выпуска
+                        </dt>
+                        <dd class="technical-parameters__item-value">2018</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Мощность
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          163 л.с.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Двигатель
+                        </dt>
+                        <dd class="technical-parameters__item-value">2.0 л</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Коробка
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          Автомат
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
 
-                <div class="btn-analog-wrap card-item__btn">
-                  <a class="btn-analog-wrap__analog-btn" href="#">
-                    Подобрать аналог
-                  </a>
-                </div>
-              </li>
-            </ul>
+                  <div class="car-price-wrap">
+                    <div class="car-price">
+                      <p class="car-price__price">1 890 000 ₽</p>
+                      <p class="car-price__desc">
+                        Цена на вторичном рынке в РФ
+                      </p>
+                    </div>
+
+                    <div class="car-price car-price--selected">
+                      <p class="car-price__price car-price__price--selected">
+                        1 540 000 ₽
+                      </p>
+                      <p class="car-price__desc">
+                        Цена из Кореи во Владивостоке
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-analog-wrap card-item__btn">
+                    <a class="btn-analog-wrap__analog-btn" href="#">
+                      Подобрать аналог
+                    </a>
+                  </div>
+                </li>
+                <li class="card-item popular-car-list__item swiper-slide">
+                  <div class="card-item-photo">
+                    <img
+                      class="card-photo-wrap__img"
+                      src="img/kia-k5.jpg"
+                      alt="KIA K5"
+                    />
+                  </div>
+                  <div class="description-car card-item__info">
+                    <h3 class="description-car__title">KIA K5 (Optima)</h3>
+                    <div class="description-car__list">
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Пробег
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          До 90 тыс. км.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Год выпуска
+                        </dt>
+                        <dd class="technical-parameters__item-value">2018</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Мощность
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          163 л.с.
+                        </dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Двигатель
+                        </dt>
+                        <dd class="technical-parameters__item-value">2.0 л</dd>
+                      </dl>
+                      <dl class="technical-parameters">
+                        <dt class="small-text technical-parameters__item-title">
+                          Коробка
+                        </dt>
+                        <dd class="technical-parameters__item-value">
+                          Автомат
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="car-price-wrap">
+                    <div class="car-price">
+                      <p class="car-price__price">1 890 000 ₽</p>
+                      <p class="car-price__desc">
+                        Цена на вторичном рынке в РФ
+                      </p>
+                    </div>
+
+                    <div class="car-price car-price--selected">
+                      <p class="car-price__price car-price__price--selected">
+                        1 540 000 ₽
+                      </p>
+                      <p class="car-price__desc">
+                        Цена из Кореи во Владивостоке
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-analog-wrap card-item__btn">
+                    <a class="btn-analog-wrap__analog-btn" href="#">
+                      Подобрать аналог
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -532,102 +568,275 @@
           <div class="korea-advantages__wrap">
             <ul class="korea-advantages-list">
               <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">Честный пробег</p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Сервисное обслуживание
+                <p class="m-text korea-advantages-list__title">
+                  Честный пробег
                 </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Выездная диагностика
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Прозрачная история а/м
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Разнообразие двигателей и трансмиссий
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Выездная диагностика
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Стоимость автомобиля
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Качество сборки
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Богатые комплектации
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Европейские автомобили
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Американские автомобили
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Коммерческий транспорт
-                </p>
-              </li>
-              <li class="korea-advantages-list__item">
-                <p class="m-text korea-advantages-list__text">
-                  Русификация меню
-                </p>
-              </li>
-            </ul>
-            <div class="card-car korea-advantages__card">
-              <div class="korea-advantages-photo card-car__photo">
-                <img
-                  class="korea-advantages-photo__img"
-                  src="img/kia-k5.jpg"
-                  alt="KIA K5 (Optima)"
-                />
-              </div>
-
-              <div class="description-card card-car__content">
-                <p class="description-card__title">Честный пробег</p>
-                <p class="small-text description-card__text">
+                <p class="small-text korea-advantages-list__text">
                   Скрутить пробег в Корее нельзя, т.к. это уголовное
                   преступление и никто не будет с этим связываться + пробег
                   легко проверить через базы страховых компаний
                 </p>
-                <div class="scroll-buttons description-card__buttons">
-                  <div class="back-next-btn">
-                    <img
-                      class="back-next-btn__img"
-                      src="img/arrow.svg"
-                      alt="Предыдущее преимущество"
-                    />
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Сервисное обслуживание
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Выездная диагностика
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Прозрачная история а/м
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Разнообразие двигателей и трансмиссий
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Выездная диагностика
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Стоимость автомобиля
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Качество сборки
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Богатые комплектации
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Европейские автомобили
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Американские автомобили
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Коммерческий транспорт
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+              <li class="korea-advantages-list__item">
+                <p class="m-text korea-advantages-list__title">
+                  Русификация меню
+                </p>
+                <p class="small-text korea-advantages-list__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Дорогу, пояс его имени гор
+                  коварный оксмокс страну lorem рукопись курсивных несколько
+                  парадигматическая проектах свое не выйти заголовок дал?
+                  Вопрос.
+                </p>
+              </li>
+            </ul>
+            <div class="korea-advantages-swiper-container swiper">
+              <ul class="korea-advantages-list-card swiper-wrapper">
+                <li class="card-car korea-advantages__card swiper-slide">
+                  <div class="korea-advantages__card-wrap">
+                    <div class="korea-advantages-photo card-car__photo">
+                      <img
+                        class="korea-advantages-photo__img"
+                        src="img/kia-k5.jpg"
+                        alt="KIA K5 (Optima)"
+                      />
+                    </div>
+
+                    <div class="description-card card-car__content">
+                      <p class="description-card__title">Честный пробег</p>
+                      <p class="small-text description-card__text">
+                        Скрутить пробег в Корее нельзя, т.к. это уголовное
+                        преступление и никто не будет с этим связываться +
+                        пробег легко проверить через базы страховых компаний
+                      </p>
+                      <div class="scroll-buttons description-card__buttons">
+                        <div class="back-next-btn swiper-button-prev">
+                          <img
+                            class="back-next-btn__img"
+                            src="img/arrow.svg"
+                            alt="Предыдущее преимущество"
+                          />
+                        </div>
+                        <div class="back-next-btn swiper-button-next">
+                          <img
+                            class="back-next-btn__img back-next-btn__img--rotate"
+                            src="img/arrow.svg"
+                            alt="Следующее преимущество"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="back-next-btn">
-                    <img
-                      class="back-next-btn__img back-next-btn__img--rotate"
-                      src="img/arrow.svg"
-                      alt="Следующее преимущество"
-                    />
+                </li>
+                <li class="card-car korea-advantages__card swiper-slide">
+                  <div class="korea-advantages__card-wrap">
+                    <div class="korea-advantages-photo card-car__photo">
+                      <img
+                        class="korea-advantages-photo__img"
+                        src="img/kia-k5.jpg"
+                        alt="KIA K5 (Optima)"
+                      />
+                    </div>
+                    <div class="description-card card-car__content">
+                      <p class="description-card__title">
+                        Сервисное обслуживание
+                      </p>
+                      <p class="small-text description-card__text">
+                        Сервисное обслуживание в Корее нельзя, т.к. это
+                        уголовное преступление и никто не будет с этим
+                        связываться + пробег легко проверить через базы
+                        страховых компаний
+                      </p>
+                      <div class="scroll-buttons description-card__buttons">
+                        <div class="back-next-btn swiper-button-prev">
+                          <img
+                            class="back-next-btn__img"
+                            src="img/arrow.svg"
+                            alt="Предыдущее преимущество"
+                          />
+                        </div>
+                        <div class="back-next-btn swiper-button-next">
+                          <img
+                            class="back-next-btn__img back-next-btn__img--rotate"
+                            src="img/arrow.svg"
+                            alt="Следующее преимущество"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <li class="card-car korea-advantages__card swiper-slide">
+                  <div class="korea-advantages__card-wrap">
+                    <div class="korea-advantages-photo card-car__photo">
+                      <img
+                        class="korea-advantages-photo__img"
+                        src="img/kia-k5.jpg"
+                        alt="KIA K5 (Optima)"
+                      />
+                    </div>
+                    <div class="description-card card-car__content">
+                      <p class="description-card__title">
+                        Выездная диагностика
+                      </p>
+                      <p class="small-text description-card__text">
+                        Выездная диагностика в Корее нельзя, т.к. это уголовное
+                        преступление и никто не будет с этим связываться +
+                        пробег легко проверить через базы страховых компаний
+                      </p>
+                      <div class="scroll-buttons description-card__buttons">
+                        <div class="back-next-btn swiper-button-prev">
+                          <img
+                            class="back-next-btn__img"
+                            src="img/arrow.svg"
+                            alt="Предыдущее преимущество"
+                          />
+                        </div>
+                        <div class="back-next-btn swiper-button-next">
+                          <img
+                            class="back-next-btn__img back-next-btn__img--rotate"
+                            src="img/arrow.svg"
+                            alt="Следующее преимущество"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -651,35 +860,59 @@
             <h2 class="subtitle question-answer__title">Вопрос-ответ</h2>
             <ul class="question-answer-list">
               <li class="question-answer-content question-answer-list__item">
-                <p class="question-answer-content__text">
+                <p class="question-answer-content__title">
                   Какие сроки поставки а/м?
                 </p>
+                <p class="small-text question-answer-content__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis culpa odit itaque quibusdam! Deserunt ratione quia
+                  optio corrupti provident nemo quas quisquam fugiat laborum
+                  facere, adipisci assumenda quidem iusto velit.
+                </p>
               </li>
               <li class="question-answer-content question-answer-list__item">
-                <p class="question-answer-content__text">
+                <p class="question-answer-content__title">
                   Что проверяет технический специалист при осмотре а/м?
                 </p>
+                <p class="small-text question-answer-content__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis culpa odit itaque quibusdam! Deserunt ratione quia
+                  optio corrupti provident nemo quas quisquam fugiat laborum
+                  facere, adipisci assumenda quidem iusto velit.
+                </p>
               </li>
               <li class="question-answer-content question-answer-list__item">
-                <p class="question-answer-content__text">
+                <p class="question-answer-content__title">
                   Страхуются ли автомобили при перевозке из Кореи в Россию?
                 </p>
-                <!-- <p class="qa-hide">
-              Наш партнер в Корее - это официальная экспортная компания, она же
-              выставляет инвойс, на ее реквизиты Вы оплачиваете а/м. До отправки
-              во Владивосток, а/м хранятся у нашего партнера на охраняемой
-              парковке около порта.
-            </p> -->
+                <p class="small-text question-answer-content__text">
+                  Наш партнер в Корее - это официальная экспортная компания, она
+                  же выставляет инвойс, на ее реквизиты Вы оплачиваете а/м. До
+                  отправки во Владивосток, а/м хранятся у нашего партнера на
+                  охраняемой парковке около порта.
+                </p>
               </li>
               <li class="question-answer-content question-answer-list__item">
-                <p class="question-answer-content__text">
+                <p class="question-answer-content__title">
                   Кто в Корее подбирает автомобили и кому мы платим, если вы
                   находитесь в Москве?
                 </p>
+                <p class="small-text question-answer-content__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis culpa odit itaque quibusdam! Deserunt ratione quia
+                  optio corrupti provident nemo quas quisquam fugiat laborum
+                  facere, adipisci assumenda quidem iusto velit.
+                </p>
               </li>
               <li class="question-answer-content question-answer-list__item">
-                <p class="question-answer-content__text">
+                <p class="question-answer-content__title">
                   Какие юридические гарантии есть при работе с Вашей компанией?
+                </p>
+                <p class="small-text question-answer-content__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis culpa odit itaque quibusdam! Deserunt ratione quia
+                  optio corrupti provident nemo quas quisquam fugiat laborum
+                  facere, adipisci assumenda quidem iusto velit.
                 </p>
               </li>
             </ul>
@@ -817,11 +1050,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      var burger = document.querySelector(".header__menu-burger");
-      burger.addEventListener("click", function () {
-        burger.classList.toggle("header__menu-burger--active");
-      });
-    </script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

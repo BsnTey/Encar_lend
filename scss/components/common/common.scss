@@ -65,6 +65,7 @@ video {
 
 @media (max-width: 620px) {
   .container {
+    // max-width: 590;
     padding: 0 16px;
   }
 }
@@ -81,4 +82,8 @@ video {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+}
+
+.no-pseudo-after::after {
+  content: none !important;
 }

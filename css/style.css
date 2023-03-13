@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "/node_modules/swiper/swiper-bundle.css";
 * {
   margin: 0;
   padding: 0;
@@ -80,6 +81,10 @@ video {
   line-height: 22px;
 }
 
+.no-pseudo-after::after {
+  content: none !important;
+}
+
 .intro {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url("../../../img/back-top.png") no-repeat;
   background-repeat: no-repeat;
@@ -105,6 +110,21 @@ video {
     padding-top: 31px;
   }
 }
+.header__address {
+  display: none;
+}
+
+.header--active {
+  position: fixed;
+  z-index: 55;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
 @media (max-width: 620px) {
   .header {
     margin-top: 12px;
@@ -162,6 +182,12 @@ video {
 @media (max-width: 1200px) {
   .menu-list {
     gap: 28px;
+  }
+}
+@media (max-width: 1024px) {
+  .menu-list {
+    position: relative;
+    display: none;
   }
 }
 .menu__list-link {
@@ -383,19 +409,60 @@ video {
 .header__menu-burger--active::before {
   top: 50%;
   transform: rotate(-45deg) translate(0, -50%);
+  opacity: 0.33;
 }
 
 .header__menu-burger--active::after {
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
+  opacity: 0.33;
 }
 
 @media (max-width: 1024px) {
   .menu {
-    display: none;
+    display: block;
+  }
+  .menu__list-link {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .menu-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menu-list--active {
+    display: flex;
+  }
+  .header {
+    display: flex;
+  }
+  .header__address--active {
+    display: block;
+  }
+  .header--active {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 62px;
   }
   .header__menu-burger {
     display: flex;
+  }
+  .header__menu-burger--active {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__btn--active {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .header__address--active {
+    max-width: 250px;
+    text-align: center;
   }
 }
 .advantages {
@@ -420,12 +487,12 @@ video {
   background-image: url("../../../img/blue-audi-back.png");
   background-repeat: no-repeat;
   min-height: 840px;
-  background-size: cover;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1680px) {
   .advantages-buying {
     padding: 44px 58px 44px 58px;
+    background-size: cover;
   }
   .advantages-list__item > .m-text {
     font-size: 14px;
@@ -651,6 +718,7 @@ video {
 }
 .popular-car-wrap {
   margin-top: 32px;
+  overflow: visible;
 }
 
 @media (max-width: 660px) {
@@ -658,23 +726,14 @@ video {
     margin-top: 20px;
   }
 }
-.popular-car-list {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-}
-
-@media (max-width: 1450px) {
-  .popular-car-list {
-    flex-wrap: wrap;
-  }
-}
 .card-item {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  margin: 0 auto;
   padding-bottom: 30px;
+  position: relative;
+  left: 0;
   border-radius: 36px;
-  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.12);
   max-width: 461px;
 }
 .card-item__btn {
@@ -694,9 +753,22 @@ video {
   padding: 15px 15px 0;
 }
 
-@media (max-width: 620px) {
-  .popular-car-list {
-    padding: 6px 6px 0;
+.popular-car-list {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 60px 60px 60px;
+}
+
+.advantages-swiper-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1800px) {
+  .popular-car-list:not(.advantages-swiper-container) {
+    gap: 0;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 620px) {
@@ -1291,6 +1363,19 @@ video {
     padding-top: 40px;
   }
 }
+.korea-advantages__card {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  width: 100%;
+  padding: 40px;
+}
+.korea-advantages__card-wrap {
+  max-width: 460px;
+  background: #ffffff;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 36px;
+}
 .korea-advantages__wrap {
   padding-top: 46px;
   display: flex;
@@ -1303,10 +1388,43 @@ video {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 620px) {
+  .korea-advantages__card-wrap {
+    border-radius: 24px;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  margin: 0 !important;
+}
+
+.swiper-button-prev::after {
+  content: "" !important;
+}
+
+.swiper-button-next::after {
+  content: "" !important;
+}
+
+.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fa002c !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px !important;
+  height: 14px !important;
+}
+
 .korea-advantages-list {
   display: grid;
-  grid-template-rows: repeat(7, max-content);
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   column-gap: 90px;
   list-style: none;
 }
@@ -1318,29 +1436,52 @@ video {
 .korea-advantages-list__item:last-child {
   border-bottom: none;
 }
-.korea-advantages-list__text {
+.korea-advantages-list__title {
   padding-left: 40px;
 }
-.korea-advantages-list__text::before {
+.korea-advantages-list__title--show {
+  padding-bottom: 20px;
+}
+.korea-advantages-list__title::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 23px;
+  width: 24px;
   height: 6px;
   margin: 10px 25px 10px 0;
   background: #fa002c;
   border-radius: 1px;
 }
+.korea-advantages-list__title::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 22px;
+  width: 6px;
+  height: 23px;
+  margin: 10px 25px 10px 0;
+  background: #fa002c;
+  border-radius: 1px;
+}
+.korea-advantages-list__text {
+  max-height: 0;
+  overflow: hidden;
+}
 
-@media (max-width: 1450px) {
+@media (max-width: 1550px) {
   .korea-advantages-list {
     column-gap: 30px;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
 @media (max-width: 1200px) {
   .korea-advantages-list {
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    max-width: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .korea-advantages-list {
+    max-width: max-content;
   }
 }
 @media (max-width: 620px) {
@@ -1349,20 +1490,6 @@ video {
   }
   .korea-advantages-list__wrap {
     padding-top: 24px;
-  }
-}
-.korea-advantages__card {
-  background: #ffffff;
-  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.12);
-  border-radius: 36px;
-  align-self: flex-start;
-  max-width: 460px;
-}
-
-@media (max-width: 620px) {
-  .korea-advantages__card {
-    border-radius: 24px;
-    max-width: 300px;
   }
 }
 .korea-advantages-photo {
@@ -1408,14 +1535,19 @@ video {
   padding: 24px 0 0 0;
 }
 
+@media (max-width: 620px) {
+  .scroll-buttons {
+    display: none;
+  }
+}
 .back-next-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #d3d3d3;
-  border-radius: 60px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 60px !important;
+  height: 60px !important;
+  border: 1px solid #d3d3d3 !important;
+  border-radius: 60px !important;
 }
 .back-next-btn:hover {
   border: 1px solid rgb(250, 0, 44);
@@ -1454,26 +1586,43 @@ video {
   border-bottom: 1px solid #c2c2c2;
   position: relative;
 }
-.question-answer-content__text {
+.question-answer-content__title {
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
   line-height: 37px;
   padding-left: 93px;
 }
-.question-answer-content__text::before {
+.question-answer-content__title--show {
+  padding-bottom: 20px;
+}
+.question-answer-content__title::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 23px;
+  width: 24px;
   height: 6px;
   margin: 15px 25px 15px 0;
   background: #fa002c;
   border-radius: 1px;
 }
+.question-answer-content__title::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 42px;
+  width: 6px;
+  height: 24px;
+  background: #fa002c;
+  border-radius: 1px;
+}
+.question-answer-content__text {
+  max-height: 0;
+  overflow: hidden;
+}
 
 @media (max-width: 1200px) {
-  .question-answer-content__text {
+  .question-answer-content__title {
     font-size: 20px;
   }
 }
@@ -1481,8 +1630,11 @@ video {
   .question-answer-content {
     padding: 24px 0 24px;
   }
-  .question-answer-content__text {
+  .question-answer-content__title {
     padding-left: 35px;
+  }
+  .question-answer-content__title::after {
+    top: 31px;
   }
 }
 .garant {
@@ -1535,10 +1687,8 @@ video {
   border: 7px solid #e7e7e7;
   border-radius: 36px;
   position: relative;
-  background-size: cover;
   max-width: 1450px;
   height: auto;
-  overflow: hidden;
 }
 .consultation__title {
   max-width: 660px;
@@ -1554,6 +1704,11 @@ video {
   margin-top: 50px;
 }
 
+@media (max-width: 996px) {
+  .consultation {
+    background-size: cover;
+  }
+}
 @media (max-width: 620px) {
   .consultation {
     all: unset;
@@ -1562,7 +1717,7 @@ video {
     align-items: center;
   }
   .consultation__btn {
-    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url("../../../img/hyundai-back-mobile.png.png") no-repeat;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url("../../../img/back-hyundai-mobile.png") no-repeat;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background-size: cover;
     border-radius: 24px;
@@ -1785,6 +1940,4 @@ video {
     display: block;
     text-align: center;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

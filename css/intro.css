@@ -24,6 +24,21 @@
     padding-top: 31px;
   }
 }
+.header__address {
+  display: none;
+}
+
+.header--active {
+  position: fixed;
+  z-index: 55;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
 @media (max-width: 620px) {
   .header {
     margin-top: 12px;
@@ -81,6 +96,12 @@
 @media (max-width: 1200px) {
   .menu-list {
     gap: 28px;
+  }
+}
+@media (max-width: 1024px) {
+  .menu-list {
+    position: relative;
+    display: none;
   }
 }
 .menu__list-link {
@@ -261,38 +282,38 @@
 }
 
 .header__menu-burger {
+  display: none;
   position: relative;
   z-index: 50;
-  width: 40px;
-  height: 35px;
-  display: none;
   align-items: center;
   justify-content: flex-end;
+  width: 30px;
+  height: 18px;
 }
 
-.header__menu-burger span,
-.header__menu-burger:after,
-.header__menu-burger:before {
-  height: 5px;
+.header__menu-burger span {
+  height: 2px;
   width: 100%;
-  position: absolute;
-  background: #fa002c;
-  margin: 0 auto;
   transform: scale(1);
+  background-color: #fa002c;
+}
+
+.header__menu-burger::before,
+.header__menu-burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #fa002c;
   transition: all 0.3s ease 0s;
 }
 
-.header__menu-burger:after,
-.header__menu-burger:before {
-  content: "";
-}
-
-.header__menu-burger:after {
-  bottom: 0;
-}
-
-.header__menu-burger:before {
+.header__menu-burger::before {
   top: 0;
+}
+
+.header__menu-burger::after {
+  bottom: 0;
 }
 
 .header__menu-burger--active span {
@@ -302,18 +323,59 @@
 .header__menu-burger--active::before {
   top: 50%;
   transform: rotate(-45deg) translate(0, -50%);
+  opacity: 0.33;
 }
 
 .header__menu-burger--active::after {
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
+  opacity: 0.33;
 }
 
 @media (max-width: 1024px) {
   .menu {
+    display: block;
+  }
+  .menu__list-link {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .menu-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menu-list--active {
     display: flex;
+  }
+  .header {
+    display: flex;
+  }
+  .header__address--active {
+    display: block;
+  }
+  .header--active {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 62px;
   }
   .header__menu-burger {
     display: flex;
+  }
+  .header__menu-burger--active {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__btn--active {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .header__address--active {
+    max-width: 250px;
+    text-align: center;
   }
 }/*# sourceMappingURL=intro.css.map */
