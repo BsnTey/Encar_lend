@@ -75,29 +75,48 @@ burger.addEventListener("click", function () {
   headerAddress.classList.toggle("header__address--active");
 });
 
-
-for (let i = 0; i < koreaListTitle.length; i++) {
-  koreaListTitle[i].addEventListener('click', function() {
-    this.classList.toggle('korea-advantages-list__title--show');
-    this.classList.toggle('no-pseudo-after');
-    let content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-  });
+const addEventListenerAllElement = (listElement, ...toggleClass) => {
+  for (let i = 0; i < listElement.length; i++) {
+    listElement[i].addEventListener('click', function() {
+      toggleClass.map((el) => {
+        this.classList.toggle(el);
+      })
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  }
 }
 
-for (let i = 0; i < qaContentTitle.length; i++) {
-  qaContentTitle[i].addEventListener('click', function() {
-    this.classList.toggle('question-answer-content__title--show');
-    this.classList.toggle('no-pseudo-after');
-    let content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-  });
-}
+addEventListenerAllElement(koreaListTitle, 'korea-advantages-list__title--show', 'no-pseudo-after')
+addEventListenerAllElement(qaContentTitle, 'question-answer-content__title--show', 'no-pseudo-after')
+
+
+// for (let i = 0; i < koreaListTitle.length; i++) {
+//   koreaListTitle[i].addEventListener('click', function() {
+//     this.classList.toggle('korea-advantages-list__title--show');
+//     this.classList.toggle('no-pseudo-after');
+//     let content = this.nextElementSibling;
+//     if (content.style.maxHeight) {
+//       content.style.maxHeight = null;
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + 'px';
+//     }
+//   });
+// }
+
+// for (let i = 0; i < qaContentTitle.length; i++) {
+//   qaContentTitle[i].addEventListener('click', function() {
+//     this.classList.toggle('question-answer-content__title--show');
+//     this.classList.toggle('no-pseudo-after');
+//     let content = this.nextElementSibling;
+//     if (content.style.maxHeight) {
+//       content.style.maxHeight = null;
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + 'px';
+//     }
+//   });
+// }
